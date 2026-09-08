@@ -1,0 +1,276 @@
+<!--Breadcrumb Start-->
+<div class="flex flex-row flex-wrap justify-between items-center w-full mb-4 gap-4">
+  <app-breadcrumb [breadcrumItems]="this.breadcrumb"></app-breadcrumb>
+  <div class="flex flex-row gap-4 flex-wrap">
+    <!--//////////-->
+    <!--Secondary Button Start-->
+    <button
+      (click)="toggleDarkMode(false)"
+      type="button"
+      class="group flex flex-row gap-2 items-center text-primary dark:!text-primary_dark hover:text-white bg-transparent hover:bg-primary focus:ring-4 focus:ring-primary focus:ring-opacity-30 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none border border-primary"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 18" class="w-5 h-[18px] fill-none">
+        <path
+          class="fill-primary group-hover:fill-white"
+          d="M10.0001 12.75C9.17599 12.75 8.37041 12.5301 7.68521 12.118C7 11.706 6.46595 11.1203 6.15058 10.4351C5.83522 9.74984 5.7527 8.99584 5.91348 8.26841C6.07425 7.54098 6.47108 6.8728 7.0538 6.34835C7.63652 5.8239 8.37895 5.46675 9.18721 5.32206C9.99546 5.17736 10.8332 5.25162 11.5946 5.53545C12.356 5.81928 13.0067 6.29993 13.4645 6.91661C13.9224 7.5333 14.1667 8.25832 14.1667 9C14.1654 9.9942 13.726 10.9473 12.9449 11.6503C12.1638 12.3533 11.1047 12.7488 10.0001 12.75ZM10.0001 6.75C9.50563 6.75 9.02228 6.88196 8.61116 7.12919C8.20003 7.37643 7.8796 7.72783 7.69038 8.13896C7.50116 8.5501 7.45166 9.0025 7.54812 9.43895C7.64458 9.87541 7.88268 10.2763 8.23231 10.591C8.58195 10.9057 9.0274 11.12 9.51236 11.2068C9.99731 11.2936 10.5 11.249 10.9568 11.0787C11.4136 10.9084 11.8041 10.62 12.0788 10.25C12.3535 9.88002 12.5001 9.44501 12.5001 9C12.5001 8.40326 12.2367 7.83097 11.7678 7.40901C11.299 6.98705 10.6631 6.75 10.0001 6.75Z"
+        />
+        <path
+          class="fill-primary group-hover:fill-white"
+          d="M10.0001 4.5C9.77907 4.5 9.56711 4.42098 9.41083 4.28033C9.25455 4.13968 9.16675 3.94891 9.16675 3.75V2.25C9.16675 2.05109 9.25455 1.86032 9.41083 1.71967C9.56711 1.57902 9.77907 1.5 10.0001 1.5C10.2211 1.5 10.4331 1.57902 10.5893 1.71967C10.7456 1.86032 10.8334 2.05109 10.8334 2.25V3.75C10.8334 3.94891 10.7456 4.13968 10.5893 4.28033C10.4331 4.42098 10.2211 4.5 10.0001 4.5Z"
+        />
+        <path
+          class="fill-primary group-hover:fill-white"
+          d="M10.0001 16.5C9.77907 16.5 9.56711 16.421 9.41083 16.2803C9.25455 16.1397 9.16675 15.9489 9.16675 15.75V14.25C9.16675 14.0511 9.25455 13.8603 9.41083 13.7197C9.56711 13.579 9.77907 13.5 10.0001 13.5C10.2211 13.5 10.4331 13.579 10.5893 13.7197C10.7456 13.8603 10.8334 14.0511 10.8334 14.25V15.75C10.8334 15.9489 10.7456 16.1397 10.5893 16.2803C10.4331 16.421 10.2211 16.5 10.0001 16.5Z"
+        />
+        <path
+          class="fill-primary group-hover:fill-white"
+          d="M5.87508 6.0375C5.65409 6.03746 5.44216 5.95841 5.28591 5.81775L4.10758 4.75725C3.95578 4.6158 3.87179 4.42635 3.87369 4.2297C3.87559 4.03305 3.96323 3.84494 4.11773 3.70589C4.27224 3.56683 4.48125 3.48795 4.69975 3.48624C4.91824 3.48454 5.12875 3.56013 5.28591 3.69675L6.46425 4.75725C6.58076 4.86214 6.66009 4.99576 6.69223 5.14123C6.72437 5.28669 6.70787 5.43747 6.64481 5.57449C6.58176 5.71152 6.47497 5.82864 6.33796 5.91105C6.20096 5.99346 6.03987 6.03747 5.87508 6.0375Z"
+        />
+        <path
+          class="fill-primary group-hover:fill-white"
+          d="M15.3034 14.523C15.0824 14.523 14.8705 14.4439 14.7142 14.3032L13.5359 13.2427C13.3841 13.1013 13.3001 12.9118 13.302 12.7152C13.3039 12.5186 13.3916 12.3304 13.5461 12.1914C13.7006 12.0523 13.9096 11.9735 14.1281 11.9717C14.3466 11.97 14.5571 12.0456 14.7142 12.1823L15.8926 13.2427C16.0091 13.3476 16.0884 13.4813 16.1206 13.6267C16.1527 13.7722 16.1362 13.923 16.0731 14.06C16.0101 14.197 15.9033 14.3141 15.7663 14.3966C15.6293 14.479 15.4682 14.523 15.3034 14.523Z"
+        />
+        <path
+          class="fill-primary group-hover:fill-white"
+          d="M4.16675 9.75H2.50008C2.27907 9.75 2.06711 9.67098 1.91083 9.53033C1.75455 9.38968 1.66675 9.19891 1.66675 9C1.66675 8.80109 1.75455 8.61032 1.91083 8.46967C2.06711 8.32902 2.27907 8.25 2.50008 8.25H4.16675C4.38776 8.25 4.59972 8.32902 4.756 8.46967C4.91228 8.61032 5.00008 8.80109 5.00008 9C5.00008 9.19891 4.91228 9.38968 4.756 9.53033C4.59972 9.67098 4.38776 9.75 4.16675 9.75Z"
+        />
+        <path
+          class="fill-primary group-hover:fill-white"
+          d="M17.5001 9.75H15.8334C15.6124 9.75 15.4004 9.67098 15.2442 9.53033C15.0879 9.38968 15.0001 9.19891 15.0001 9C15.0001 8.80109 15.0879 8.61032 15.2442 8.46967C15.4004 8.32902 15.6124 8.25 15.8334 8.25H17.5001C17.7211 8.25 17.9331 8.32902 18.0893 8.46967C18.2456 8.61032 18.3334 8.80109 18.3334 9C18.3334 9.19891 18.2456 9.38968 18.0893 9.53033C17.9331 9.67098 17.7211 9.75 17.5001 9.75Z"
+        />
+        <path
+          class="fill-primary group-hover:fill-white"
+          d="M4.69675 14.523C4.53196 14.523 4.37087 14.479 4.23387 14.3966C4.09686 14.3141 3.99008 14.197 3.92702 14.06C3.86396 13.923 3.84746 13.7722 3.8796 13.6267C3.91174 13.4813 3.99107 13.3476 4.10758 13.2427L5.28592 12.1823C5.44308 12.0456 5.65359 11.97 5.87208 11.9717C6.09058 11.9735 6.29959 12.0523 6.4541 12.1914C6.6086 12.3304 6.69624 12.5186 6.69814 12.7152C6.70004 12.9118 6.61605 13.1013 6.46425 13.2427L5.28592 14.3032C5.12967 14.4439 4.91774 14.523 4.69675 14.523Z"
+        />
+        <path
+          class="fill-primary group-hover:fill-white"
+          d="M14.1251 6.0375C13.9603 6.03747 13.7992 5.99346 13.6622 5.91105C13.5252 5.82864 13.4184 5.71152 13.3553 5.57449C13.2923 5.43747 13.2758 5.28669 13.3079 5.14123C13.3401 4.99576 13.4194 4.86214 13.5359 4.75725L14.7142 3.69675C14.7911 3.62512 14.8831 3.56798 14.9847 3.52867C15.0864 3.48937 15.1958 3.46868 15.3064 3.46781C15.4171 3.46695 15.5268 3.48592 15.6292 3.52363C15.7316 3.56134 15.8247 3.61703 15.9029 3.68745C15.9812 3.75787 16.043 3.84161 16.0849 3.93378C16.1268 4.02596 16.1479 4.12472 16.147 4.2243C16.146 4.32389 16.123 4.4223 16.0793 4.5138C16.0357 4.60531 15.9722 4.68806 15.8926 4.75725L14.7142 5.81775C14.558 5.95841 14.3461 6.03746 14.1251 6.0375Z"
+        />
+      </svg>
+      <span> Light Mode </span>
+    </button>
+    <!--Secondary Button End-->
+    <!--//////////-->
+    <!--Primary Button Start-->
+    <button
+      (click)="toggleDarkMode(true)"
+      type="button"
+      class="flex flex-row gap-2 items-center text-white bg-primary dark:bg-primary_dark dark:hover:bg-opacity-90 hover:bg-opacity-90 focus:ring-4 focus:ring-primary focus:ring-opacity-30 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" class="fill-none size-[18px]">
+        <path
+          class="fill-white"
+          d="M9.45687 16.5C9.38936 16.5 9.32185 16.5 9.25355 16.5C8.30919 16.4748 7.37881 16.2546 6.51553 15.8521C5.65226 15.4496 4.873 14.8726 4.22225 14.1541C3.56978 13.4423 3.05949 12.6009 2.72138 11.6792C2.38327 10.7575 2.22416 9.77423 2.25341 8.78712C2.32097 6.79167 3.13856 4.90542 4.52749 3.5406C5.91642 2.17577 7.76374 1.44336 9.66574 1.50342C9.9753 1.51356 10.2839 1.5453 10.5894 1.59843C10.7361 1.62252 10.8735 1.68931 10.9859 1.79121C11.0983 1.8931 11.1812 2.02602 11.2252 2.17487C11.2692 2.32372 11.2725 2.48254 11.2348 2.63328C11.1971 2.78403 11.1199 2.92066 11.0119 3.02767C10.5564 3.4762 10.1901 4.01506 9.93434 4.61307C9.67855 5.21109 9.53828 5.85638 9.52166 6.51164C9.50505 7.16689 9.6124 7.8191 9.83753 8.43054C10.0627 9.04199 10.4011 9.60052 10.8332 10.0738C11.714 11.0445 12.9261 11.6084 14.203 11.6414V11.6414C14.4257 11.6466 14.6484 11.6349 14.8694 11.6064C15.0168 11.5895 15.1658 11.6162 15.2996 11.6836C15.4333 11.751 15.5463 11.8563 15.6259 11.9876C15.7055 12.1189 15.7485 12.271 15.75 12.4266C15.7514 12.5823 15.7113 12.7352 15.6342 12.8682C14.9868 13.9776 14.0788 14.8942 12.9973 15.53C11.9157 16.1659 10.6967 16.4999 9.45687 16.5V16.5ZM8.8493 3.20017C7.50729 3.3473 6.26122 3.99857 5.34083 5.03389C4.42043 6.06921 3.88776 7.41878 3.84103 8.83379C3.81884 9.60028 3.94278 10.3637 4.20559 11.0793C4.4684 11.7948 4.86478 12.448 5.37147 13.0007C6.40252 14.1301 7.81656 14.7871 9.30653 14.8291C10.7965 14.8711 12.2421 14.2946 13.3294 13.2248C11.9373 12.999 10.6557 12.2957 9.6848 11.2247C8.72332 10.1703 8.12029 8.8124 7.96923 7.36167C7.81816 5.91094 8.12751 4.44845 8.8493 3.20101V3.20017Z"
+        />
+      </svg>
+      <span> Dark Mode </span>
+    </button>
+    <!--Primary Button End-->
+  </div>
+</div>
+<!--Breadcrumb End-->
+<!--//////////-->
+<!--Title Page Container Start-->
+<h3 class="text-xl 2xl:text-2xl text-gray-900 font-semibold w-full py-4">Dark mode</h3>
+<!--Title Page Container End-->
+<!--//////////-->
+<!--Grids Guide Start-->
+<!--//////////-->
+<!--Full Row Start-->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-4 mb-4 p-5 bg-white dark:bg-gray-900">
+  <!--//////////-->
+  <!--Card Demo 01 Start-->
+  <div
+    class="min-h-[442px] max-h-fit xl:max-h-[442px] w-full max-w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+  >
+    <a href="#">
+      <img
+        class="rounded-t-lg h-[230px] xl:h-[200px] w-full object-cover"
+        src="/images/dark-mode-demo/image-card.jpg"
+        alt="Image..."
+      />
+    </a>
+    <div class="p-5 dark:bg-gray-800 dark:border-gray-700">
+      <a href="#">
+        <h5
+          class="mb-2 text-lg 2xl:text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+        >
+          Card dark mode
+        </h5>
+      </a>
+      <p
+        class="mb-3 font-normal text-gray-700 dark:text-gray-400 truncate whitespace-normal line-clamp-4"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <button
+        type="button"
+        class="flex flex-row gap-2 items-center text-white bg-primary dark:bg-primary_dark dark:hover:bg-opacity-90 hover:bg-opacity-90 focus:ring-4 focus:ring-primary focus:ring-opacity-30 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
+      >
+        <span> Read more </span>
+      </button>
+    </div>
+  </div>
+  <!--Card Demo 01 End-->
+  <!--//////////-->
+  <!--Card Demo 02 Start-->
+  <div
+    class="min-h-[442px] max-h-fit xl:max-h-[442px] w-full max-w-full p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700"
+  >
+    <form class="space-y-6" action="#">
+      <h5
+        class="mb-2 text-lg 2xl:text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+      >
+        Sign in to our platform
+      </h5>
+      <div class="py-0 space-y-6">
+        <div>
+          <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Your email</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary dark:focus:ring-primary_dark dark:focus:border-primary_dark block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+            placeholder="name@originsw.com"
+            required
+          />
+        </div>
+        <div>
+          <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Your password</label
+          >
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="••••••••"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary focus:border-primary dark:focus:ring-primary_dark dark:focus:border-primary_dark block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+            required
+          />
+        </div>
+        <div class="flex items-start">
+          <div class="flex items-start">
+            <div class="flex items-center h-5">
+              <input
+                id="remember"
+                type="checkbox"
+                value=""
+                class="w-4 h-4 border border-gray-300 rounded-sm bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                required
+              />
+            </div>
+            <label for="remember" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              >Remember me</label
+            >
+          </div>
+          <a href="#" class="ms-auto text-sm text-primary dark:!text-primary_dark hover:underline"
+            >Lost Password?</a
+          >
+        </div>
+      </div>
+      <button
+        type="button"
+        class="w-full flex flex-row justify-center gap-2 items-center text-white bg-primary dark:bg-primary_dark hover:bg-opacity-90 focus:ring-4 focus:ring-primary focus:ring-opacity-30 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none"
+      >
+        Login to your account
+      </button>
+      <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+        Not registered?
+        <a href="#" class="text-primary dark:!text-primary_dark hover:underline">Create account</a>
+      </div>
+    </form>
+  </div>
+  <!--Card Demo 02 End-->
+  <!--//////////-->
+  <!--Card Demo 03 Start-->
+  <div
+    class="p-8 min-h-[442px] max-h-fit xl:max-h-[442px] relative flex justify-center items-center w-full bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+  >
+    <div class="absolute top-6 right-6">
+      <button
+        id="dropdownButton"
+        data-dropdown-toggle="dropdown"
+        class="inline-block text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
+        type="button"
+      >
+        <span class="sr-only">Open dropdown</span>
+        <svg
+          class="w-5 h-5"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 16 3"
+        >
+          <path
+            d="M2 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm6.041 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM14 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+          />
+        </svg>
+      </button>
+      <!-- Dropdown menu -->
+      <div
+        id="dropdown"
+        class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700"
+      >
+        <ul class="py-2" aria-labelledby="dropdownButton">
+          <li>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+              >Edit</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+              >Export Data</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="block px-4 py-2 text-sm text-red-600 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+              >Delete</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col items-center">
+      <img
+        class="w-24 h-24 mb-3 rounded-full shadow-lg"
+        src="/images/dark-mode-demo/image-card-02.jpg"
+        alt="Bonnie image"
+      />
+      <h5
+        class="mb-2 text-lg 2xl:text-xl font-semibold tracking-tight text-gray-900 dark:text-white"
+      >
+        Bonnie Green
+      </h5>
+      <span class="text-sm text-gray-500 dark:text-gray-400">Visual Designer</span>
+      <div class="flex gap-4 mt-4 md:mt-6">
+        <button
+          type="button"
+          class="items-center text-primary dark:!text-primary_dark hover:text-white dark:hover:!text-white bg-transparent hover:bg-primary dark:hover:bg-primary_dark focus:ring-4 focus:ring-primary focus:ring-opacity-30 !font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none border border-primary dark:border-primary_dark"
+        >
+          Add friend
+        </button>
+        <button
+          type="button"
+          class="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary dark:!text-primary_dark focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+        >
+          Message
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--Card Demo 03 End-->
+</div>
+<!--Full Row End-->
+<!--//////////-->
+<!--Grids Guide End-->
+<!--//////////-->

@@ -1,0 +1,702 @@
+<!--Main Layout Start-->
+<main [class]="this.configService.getTheme()">
+  <!--//////////-->
+  <!--Header Start-->
+  <header class="min-h-[52px] w-full sticky top-0 z-20 lg:pl-64">
+    <!--Header Inner Start-->
+    <div
+      class="w-full px-7 py-3 bg-white dark:bg-gray-900 border-solid border-0 border-b border-b-gray-200 dark:border-b-gray-600 flex justify-between lg:justify-end"
+    >
+      <!--Elements Container Right Start-->
+      <!--//////////-->
+      <!--Button Drawer Menu Mobile Start-->
+      <button
+        type="button"
+        data-drawer-target="sidebar-multi-level-sidebar"
+        data-drawer-toggle="sidebar-multi-level-sidebar"
+        aria-controls="sidebar-multi-level-sidebar"
+        class="group inline-flex justify-center items-center size-8 bg-gray-100 hover:bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-200 lg:hidden dark:bg-gray-700 dark:hover:bg-gray-500"
+      >
+        <span class="sr-only">Open sidebar Mobile</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          class="fill-none size-6"
+          aria-hidden="true"
+        >
+          <path
+            class="fill-gray-700 dark:fill-white group-hover:fill-primary"
+            d="M19.0588 7H4.94118C4.69156 7 4.45217 6.89464 4.27566 6.70711C4.09916 6.51957 4 6.26522 4 6C4 5.73478 4.09916 5.48043 4.27566 5.29289C4.45217 5.10536 4.69156 5 4.94118 5H19.0588C19.3084 5 19.5478 5.10536 19.7243 5.29289C19.9008 5.48043 20 5.73478 20 6C20 6.26522 19.9008 6.51957 19.7243 6.70711C19.5478 6.89464 19.3084 7 19.0588 7Z"
+          />
+          <path
+            class="fill-gray-700 dark:fill-white group-hover:fill-primary"
+            d="M19.0588 13H4.94118C4.69156 13 4.45217 12.8946 4.27566 12.7071C4.09916 12.5196 4 12.2652 4 12C4 11.7348 4.09916 11.4804 4.27566 11.2929C4.45217 11.1054 4.69156 11 4.94118 11H19.0588C19.3084 11 19.5478 11.1054 19.7243 11.2929C19.9008 11.4804 20 11.7348 20 12C20 12.2652 19.9008 12.5196 19.7243 12.7071C19.5478 12.8946 19.3084 13 19.0588 13Z"
+          />
+          <path
+            class="fill-gray-700 dark:fill-white group-hover:fill-primary"
+            d="M19.0588 19H4.94118C4.69156 19 4.45217 18.8946 4.27566 18.7071C4.09916 18.5196 4 18.2652 4 18C4 17.7348 4.09916 17.4804 4.27566 17.2929C4.45217 17.1054 4.69156 17 4.94118 17H19.0588C19.3084 17 19.5478 17.1054 19.7243 17.2929C19.9008 17.4804 20 17.7348 20 18C20 18.2652 19.9008 18.5196 19.7243 18.7071C19.5478 18.8946 19.3084 19 19.0588 19Z"
+          />
+        </svg>
+      </button>
+      <!--Button Drawer Menu Mobile End-->
+      <!--//////////-->
+      <div class="w-fit flex gap-4">
+        <!--Button Notifications End-->
+        <button
+          type="button"
+          data-drawer-target="drawer-right-example"
+          data-drawer-show="drawer-right-example"
+          data-drawer-placement="right"
+          aria-controls="drawer-right-example"
+          class="group flex justify-center items-center size-8 bg-gray-100 hover:bg-gray-200 rounded-lg dark:bg-gray-700"
+        >
+          <!--Icon Inner Start-->
+          <div class="relative size-6">
+            <!--Notification Ball Start-->
+            <div
+              *ngIf="notifications.length > 0"
+              class="absolute top-0 right-0.5 size-2 bg-red-600 rounded-full"
+            ></div>
+            <!--Notification Ball End-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6 fill-none">
+              <g>
+                <path
+                  class="fill-gray-700 dark:fill-white group-hover:fill-primary dark:group-hover:fill-primary"
+                  d="M4 19V17H6V10C6 8.61667 6.41667 7.3875 7.25 6.3125C8.08333 5.2375 9.16667 4.53333 10.5 4.2V3.5C10.5 3.08333 10.6458 2.72917 10.9375 2.4375C11.2292 2.14583 11.5833 2 12 2C12.4167 2 12.7708 2.14583 13.0625 2.4375C13.3542 2.72917 13.5 3.08333 13.5 3.5V4.2C14.8333 4.53333 15.9167 5.2375 16.75 6.3125C17.5833 7.3875 18 8.61667 18 10V17H20V19H4ZM12 22C11.45 22 10.9792 21.8042 10.5875 21.4125C10.1958 21.0208 10 20.55 10 20H14C14 20.55 13.8042 21.0208 13.4125 21.4125C13.0208 21.8042 12.55 22 12 22ZM8 17H16V10C16 8.9 15.6083 7.95833 14.825 7.175C14.0417 6.39167 13.1 6 12 6C10.9 6 9.95833 6.39167 9.175 7.175C8.39167 7.95833 8 8.9 8 10V17Z"
+                />
+              </g>
+            </svg>
+          </div>
+          <!--Icon Inner End-->
+        </button>
+
+        <button
+          (click)="toggleDarkMode()"
+          type="button"
+          [ngClass]="
+            isDarkMode
+              ? 'bg-primary dark:bg-primary_dark'
+              : 'border-primary border-[1px] hover:bg-primary dark:bg-primary_dark '
+          "
+          class="group flex justify-center items-center size-8 rounded-lg hover:opacity-50"
+        >
+          <ng-container *ngIf="isDarkMode; else lightMode">
+            <!-- Icono dark mode -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 18 18"
+              class="fill-none size-[18px]"
+            >
+              <path
+                class="fill-white"
+                d="M9.45687 16.5C9.38936 16.5 9.32185 16.5 9.25355 16.5C8.30919 16.4748 7.37881 16.2546 6.51553 15.8521C5.65226 15.4496 4.873 14.8726 4.22225 14.1541C3.56978 13.4423 3.05949 12.6009 2.72138 11.6792C2.38327 10.7575 2.22416 9.77423 2.25341 8.78712C2.32097 6.79167 3.13856 4.90542 4.52749 3.5406C5.91642 2.17577 7.76374 1.44336 9.66574 1.50342C9.9753 1.51356 10.2839 1.5453 10.5894 1.59843C10.7361 1.62252 10.8735 1.68931 10.9859 1.79121C11.0983 1.8931 11.1812 2.02602 11.2252 2.17487C11.2692 2.32372 11.2725 2.48254 11.2348 2.63328C11.1971 2.78403 11.1199 2.92066 11.0119 3.02767C10.5564 3.4762 10.1901 4.01506 9.93434 4.61307C9.67855 5.21109 9.53828 5.85638 9.52166 6.51164C9.50505 7.16689 9.6124 7.8191 9.83753 8.43054C10.0627 9.04199 10.4011 9.60052 10.8332 10.0738C11.714 11.0445 12.9261 11.6084 14.203 11.6414V11.6414C14.4257 11.6466 14.6484 11.6349 14.8694 11.6064C15.0168 11.5895 15.1658 11.6162 15.2996 11.6836C15.4333 11.751 15.5463 11.8563 15.6259 11.9876C15.7055 12.1189 15.7485 12.271 15.75 12.4266C15.7514 12.5823 15.7113 12.7352 15.6342 12.8682C14.9868 13.9776 14.0788 14.8942 12.9973 15.53C11.9157 16.1659 10.6967 16.4999 9.45687 16.5V16.5ZM8.8493 3.20017C7.50729 3.3473 6.26122 3.99857 5.34083 5.03389C4.42043 6.06921 3.88776 7.41878 3.84103 8.83379C3.81884 9.60028 3.94278 10.3637 4.20559 11.0793C4.4684 11.7948 4.86478 12.448 5.37147 13.0007C6.40252 14.1301 7.81656 14.7871 9.30653 14.8291C10.7965 14.8711 12.2421 14.2946 13.3294 13.2248C11.9373 12.999 10.6557 12.2957 9.6848 11.2247C8.72332 10.1703 8.12029 8.8124 7.96923 7.36167C7.81816 5.91094 8.12751 4.44845 8.8493 3.20101V3.20017Z"
+              />
+            </svg>
+          </ng-container>
+
+          <ng-template #lightMode>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 18"
+              class="w-5 h-[18px] fill-none"
+            >
+              <path
+                class="fill-primary group-hover:fill-white"
+                d="M10.0001 12.75C9.17599 12.75 8.37041 12.5301 7.68521 12.118C7 11.706 6.46595 11.1203 6.15058 10.4351C5.83522 9.74984 5.7527 8.99584 5.91348 8.26841C6.07425 7.54098 6.47108 6.8728 7.0538 6.34835C7.63652 5.8239 8.37895 5.46675 9.18721 5.32206C9.99546 5.17736 10.8332 5.25162 11.5946 5.53545C12.356 5.81928 13.0067 6.29993 13.4645 6.91661C13.9224 7.5333 14.1667 8.25832 14.1667 9C14.1654 9.9942 13.726 10.9473 12.9449 11.6503C12.1638 12.3533 11.1047 12.7488 10.0001 12.75ZM10.0001 6.75C9.50563 6.75 9.02228 6.88196 8.61116 7.12919C8.20003 7.37643 7.8796 7.72783 7.69038 8.13896C7.50116 8.5501 7.45166 9.0025 7.54812 9.43895C7.64458 9.87541 7.88268 10.2763 8.23231 10.591C8.58195 10.9057 9.0274 11.12 9.51236 11.2068C9.99731 11.2936 10.5 11.249 10.9568 11.0787C11.4136 10.9084 11.8041 10.62 12.0788 10.25C12.3535 9.88002 12.5001 9.44501 12.5001 9C12.5001 8.40326 12.2367 7.83097 11.7678 7.40901C11.299 6.98705 10.6631 6.75 10.0001 6.75Z"
+              />
+              <path
+                class="fill-primary group-hover:fill-white"
+                d="M10.0001 4.5C9.77907 4.5 9.56711 4.42098 9.41083 4.28033C9.25455 4.13968 9.16675 3.94891 9.16675 3.75V2.25C9.16675 2.05109 9.25455 1.86032 9.41083 1.71967C9.56711 1.57902 9.77907 1.5 10.0001 1.5C10.2211 1.5 10.4331 1.57902 10.5893 1.71967C10.7456 1.86032 10.8334 2.05109 10.8334 2.25V3.75C10.8334 3.94891 10.7456 4.13968 10.5893 4.28033C10.4331 4.42098 10.2211 4.5 10.0001 4.5Z"
+              />
+              <path
+                class="fill-primary group-hover:fill-white"
+                d="M10.0001 16.5C9.77907 16.5 9.56711 16.421 9.41083 16.2803C9.25455 16.1397 9.16675 15.9489 9.16675 15.75V14.25C9.16675 14.0511 9.25455 13.8603 9.41083 13.7197C9.56711 13.579 9.77907 13.5 10.0001 13.5C10.2211 13.5 10.4331 13.579 10.5893 13.7197C10.7456 13.8603 10.8334 14.0511 10.8334 14.25V15.75C10.8334 15.9489 10.7456 16.1397 10.5893 16.2803C10.4331 16.421 10.2211 16.5 10.0001 16.5Z"
+              />
+              <path
+                class="fill-primary group-hover:fill-white"
+                d="M5.87508 6.0375C5.65409 6.03746 5.44216 5.95841 5.28591 5.81775L4.10758 4.75725C3.95578 4.6158 3.87179 4.42635 3.87369 4.2297C3.87559 4.03305 3.96323 3.84494 4.11773 3.70589C4.27224 3.56683 4.48125 3.48795 4.69975 3.48624C4.91824 3.48454 5.12875 3.56013 5.28591 3.69675L6.46425 4.75725C6.58076 4.86214 6.66009 4.99576 6.69223 5.14123C6.72437 5.28669 6.70787 5.43747 6.64481 5.57449C6.58176 5.71152 6.47497 5.82864 6.33796 5.91105C6.20096 5.99346 6.03987 6.03747 5.87508 6.0375Z"
+              />
+              <path
+                class="fill-primary group-hover:fill-white"
+                d="M15.3034 14.523C15.0824 14.523 14.8705 14.4439 14.7142 14.3032L13.5359 13.2427C13.3841 13.1013 13.3001 12.9118 13.302 12.7152C13.3039 12.5186 13.3916 12.3304 13.5461 12.1914C13.7006 12.0523 13.9096 11.9735 14.1281 11.9717C14.3466 11.97 14.5571 12.0456 14.7142 12.1823L15.8926 13.2427C16.0091 13.3476 16.0884 13.4813 16.1206 13.6267C16.1527 13.7722 16.1362 13.923 16.0731 14.06C16.0101 14.197 15.9033 14.3141 15.7663 14.3966C15.6293 14.479 15.4682 14.523 15.3034 14.523Z"
+              />
+              <path
+                class="fill-primary group-hover:fill-white"
+                d="M4.16675 9.75H2.50008C2.27907 9.75 2.06711 9.67098 1.91083 9.53033C1.75455 9.38968 1.66675 9.19891 1.66675 9C1.66675 8.80109 1.75455 8.61032 1.91083 8.46967C2.06711 8.32902 2.27907 8.25 2.50008 8.25H4.16675C4.38776 8.25 4.59972 8.32902 4.756 8.46967C4.91228 8.61032 5.00008 8.80109 5.00008 9C5.00008 9.19891 4.91228 9.38968 4.756 9.53033C4.59972 9.67098 4.38776 9.75 4.16675 9.75Z"
+              />
+              <path
+                class="fill-primary group-hover:fill-white"
+                d="M17.5001 9.75H15.8334C15.6124 9.75 15.4004 9.67098 15.2442 9.53033C15.0879 9.38968 15.0001 9.19891 15.0001 9C15.0001 8.80109 15.0879 8.61032 15.2442 8.46967C15.4004 8.32902 15.6124 8.25 15.8334 8.25H17.5001C17.7211 8.25 17.9331 8.32902 18.0893 8.46967C18.2456 8.61032 18.3334 8.80109 18.3334 9C18.3334 9.19891 18.2456 9.38968 18.0893 9.53033C17.9331 9.67098 17.7211 9.75 17.5001 9.75Z"
+              />
+              <path
+                class="fill-primary group-hover:fill-white"
+                d="M4.69675 14.523C4.53196 14.523 4.37087 14.479 4.23387 14.3966C4.09686 14.3141 3.99008 14.197 3.92702 14.06C3.86396 13.923 3.84746 13.7722 3.8796 13.6267C3.91174 13.4813 3.99107 13.3476 4.10758 13.2427L5.28592 12.1823C5.44308 12.0456 5.65359 11.97 5.87208 11.9717C6.09058 11.9735 6.29959 12.0523 6.4541 12.1914C6.6086 12.3304 6.69624 12.5186 6.69814 12.7152C6.70004 12.9118 6.61605 13.1013 6.46425 13.2427L5.28592 14.3032C5.12967 14.4439 4.91774 14.523 4.69675 14.523Z"
+              />
+              <path
+                class="fill-primary group-hover:fill-white"
+                d="M14.1251 6.0375C13.9603 6.03747 13.7992 5.99346 13.6622 5.91105C13.5252 5.82864 13.4184 5.71152 13.3553 5.57449C13.2923 5.43747 13.2758 5.28669 13.3079 5.14123C13.3401 4.99576 13.4194 4.86214 13.5359 4.75725L14.7142 3.69675C14.7911 3.62512 14.8831 3.56798 14.9847 3.52867C15.0864 3.48937 15.1958 3.46868 15.3064 3.46781C15.4171 3.46695 15.5268 3.48592 15.6292 3.52363C15.7316 3.56134 15.8247 3.61703 15.9029 3.68745C15.9812 3.75787 16.043 3.84161 16.0849 3.93378C16.1268 4.02596 16.1479 4.12472 16.147 4.2243C16.146 4.32389 16.123 4.4223 16.0793 4.5138C16.0357 4.60531 15.9722 4.68806 15.8926 4.75725L14.7142 5.81775C14.558 5.95841 14.3461 6.03746 14.1251 6.0375Z"
+              />
+            </svg>
+          </ng-template>
+        </button>
+
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input
+            type="checkbox"
+            class="sr-only peer"
+            [checked]="isDarkMode"
+            (change)="toggleDarkMode()"
+          />
+          <div
+            class="w-14 h-8 bg-gray-300 dark:bg-gray-600 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-primary rounded-full peer dark:peer-checked:bg-gray-500 peer-checked:bg-primary transition-colors duration-300"
+          ></div>
+          <span
+            class="absolute left-1 top-1 w-6 h-6 bg-white dark:peer-checked:bg-gray-700 rounded-full transition-transform duration-300 transform peer-checked:translate-x-6 flex justify-center items-center"
+          >
+            <ng-container *ngIf="isDarkMode; else sunIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 18 18"
+                class="fill-none size-[18px]"
+              >
+                <path
+                  class="fill-white"
+                  d="M9.45687 16.5C9.38936 16.5 9.32185 16.5 9.25355 16.5C8.30919 16.4748 7.37881 16.2546 6.51553 15.8521C5.65226 15.4496 4.873 14.8726 4.22225 14.1541C3.56978 13.4423 3.05949 12.6009 2.72138 11.6792C2.38327 10.7575 2.22416 9.77423 2.25341 8.78712C2.32097 6.79167 3.13856 4.90542 4.52749 3.5406C5.91642 2.17577 7.76374 1.44336 9.66574 1.50342C9.9753 1.51356 10.2839 1.5453 10.5894 1.59843C10.7361 1.62252 10.8735 1.68931 10.9859 1.79121C11.0983 1.8931 11.1812 2.02602 11.2252 2.17487C11.2692 2.32372 11.2725 2.48254 11.2348 2.63328C11.1971 2.78403 11.1199 2.92066 11.0119 3.02767C10.5564 3.4762 10.1901 4.01506 9.93434 4.61307C9.67855 5.21109 9.53828 5.85638 9.52166 6.51164C9.50505 7.16689 9.6124 7.8191 9.83753 8.43054C10.0627 9.04199 10.4011 9.60052 10.8332 10.0738C11.714 11.0445 12.9261 11.6084 14.203 11.6414V11.6414C14.4257 11.6466 14.6484 11.6349 14.8694 11.6064C15.0168 11.5895 15.1658 11.6162 15.2996 11.6836C15.4333 11.751 15.5463 11.8563 15.6259 11.9876C15.7055 12.1189 15.7485 12.271 15.75 12.4266C15.7514 12.5823 15.7113 12.7352 15.6342 12.8682C14.9868 13.9776 14.0788 14.8942 12.9973 15.53C11.9157 16.1659 10.6967 16.4999 9.45687 16.5V16.5ZM8.8493 3.20017C7.50729 3.3473 6.26122 3.99857 5.34083 5.03389C4.42043 6.06921 3.88776 7.41878 3.84103 8.83379C3.81884 9.60028 3.94278 10.3637 4.20559 11.0793C4.4684 11.7948 4.86478 12.448 5.37147 13.0007C6.40252 14.1301 7.81656 14.7871 9.30653 14.8291C10.7965 14.8711 12.2421 14.2946 13.3294 13.2248C11.9373 12.999 10.6557 12.2957 9.6848 11.2247C8.72332 10.1703 8.12029 8.8124 7.96923 7.36167C7.81816 5.91094 8.12751 4.44845 8.8493 3.20101V3.20017Z"
+                />
+              </svg>
+            </ng-container>
+            <ng-template #sunIcon>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 18"
+                class="w-5 h-[18px] fill-none"
+              >
+                <path
+                  class="fill-[#f9b700] group-hover:fill-white"
+                  d="M10.0001 12.75C9.17599 12.75 8.37041 12.5301 7.68521 12.118C7 11.706 6.46595 11.1203 6.15058 10.4351C5.83522 9.74984 5.7527 8.99584 5.91348 8.26841C6.07425 7.54098 6.47108 6.8728 7.0538 6.34835C7.63652 5.8239 8.37895 5.46675 9.18721 5.32206C9.99546 5.17736 10.8332 5.25162 11.5946 5.53545C12.356 5.81928 13.0067 6.29993 13.4645 6.91661C13.9224 7.5333 14.1667 8.25832 14.1667 9C14.1654 9.9942 13.726 10.9473 12.9449 11.6503C12.1638 12.3533 11.1047 12.7488 10.0001 12.75ZM10.0001 6.75C9.50563 6.75 9.02228 6.88196 8.61116 7.12919C8.20003 7.37643 7.8796 7.72783 7.69038 8.13896C7.50116 8.5501 7.45166 9.0025 7.54812 9.43895C7.64458 9.87541 7.88268 10.2763 8.23231 10.591C8.58195 10.9057 9.0274 11.12 9.51236 11.2068C9.99731 11.2936 10.5 11.249 10.9568 11.0787C11.4136 10.9084 11.8041 10.62 12.0788 10.25C12.3535 9.88002 12.5001 9.44501 12.5001 9C12.5001 8.40326 12.2367 7.83097 11.7678 7.40901C11.299 6.98705 10.6631 6.75 10.0001 6.75Z"
+                />
+                <path
+                  class="fill-[#f9b700] group-hover:fill-white"
+                  d="M10.0001 4.5C9.77907 4.5 9.56711 4.42098 9.41083 4.28033C9.25455 4.13968 9.16675 3.94891 9.16675 3.75V2.25C9.16675 2.05109 9.25455 1.86032 9.41083 1.71967C9.56711 1.57902 9.77907 1.5 10.0001 1.5C10.2211 1.5 10.4331 1.57902 10.5893 1.71967C10.7456 1.86032 10.8334 2.05109 10.8334 2.25V3.75C10.8334 3.94891 10.7456 4.13968 10.5893 4.28033C10.4331 4.42098 10.2211 4.5 10.0001 4.5Z"
+                />
+                <path
+                  class="fill-[#f9b700] group-hover:fill-white"
+                  d="M10.0001 16.5C9.77907 16.5 9.56711 16.421 9.41083 16.2803C9.25455 16.1397 9.16675 15.9489 9.16675 15.75V14.25C9.16675 14.0511 9.25455 13.8603 9.41083 13.7197C9.56711 13.579 9.77907 13.5 10.0001 13.5C10.2211 13.5 10.4331 13.579 10.5893 13.7197C10.7456 13.8603 10.8334 14.0511 10.8334 14.25V15.75C10.8334 15.9489 10.7456 16.1397 10.5893 16.2803C10.4331 16.421 10.2211 16.5 10.0001 16.5Z"
+                />
+                <path
+                  class="fill-[#f9b700] group-hover:fill-white"
+                  d="M5.87508 6.0375C5.65409 6.03746 5.44216 5.95841 5.28591 5.81775L4.10758 4.75725C3.95578 4.6158 3.87179 4.42635 3.87369 4.2297C3.87559 4.03305 3.96323 3.84494 4.11773 3.70589C4.27224 3.56683 4.48125 3.48795 4.69975 3.48624C4.91824 3.48454 5.12875 3.56013 5.28591 3.69675L6.46425 4.75725C6.58076 4.86214 6.66009 4.99576 6.69223 5.14123C6.72437 5.28669 6.70787 5.43747 6.64481 5.57449C6.58176 5.71152 6.47497 5.82864 6.33796 5.91105C6.20096 5.99346 6.03987 6.03747 5.87508 6.0375Z"
+                />
+                <path
+                  class="fill-[#f9b700] group-hover:fill-white"
+                  d="M15.3034 14.523C15.0824 14.523 14.8705 14.4439 14.7142 14.3032L13.5359 13.2427C13.3841 13.1013 13.3001 12.9118 13.302 12.7152C13.3039 12.5186 13.3916 12.3304 13.5461 12.1914C13.7006 12.0523 13.9096 11.9735 14.1281 11.9717C14.3466 11.97 14.5571 12.0456 14.7142 12.1823L15.8926 13.2427C16.0091 13.3476 16.0884 13.4813 16.1206 13.6267C16.1527 13.7722 16.1362 13.923 16.0731 14.06C16.0101 14.197 15.9033 14.3141 15.7663 14.3966C15.6293 14.479 15.4682 14.523 15.3034 14.523Z"
+                />
+                <path
+                  class="fill-[#f9b700] group-hover:fill-white"
+                  d="M4.16675 9.75H2.50008C2.27907 9.75 2.06711 9.67098 1.91083 9.53033C1.75455 9.38968 1.66675 9.19891 1.66675 9C1.66675 8.80109 1.75455 8.61032 1.91083 8.46967C2.06711 8.32902 2.27907 8.25 2.50008 8.25H4.16675C4.38776 8.25 4.59972 8.32902 4.756 8.46967C4.91228 8.61032 5.00008 8.80109 5.00008 9C5.00008 9.19891 4.91228 9.38968 4.756 9.53033C4.59972 9.67098 4.38776 9.75 4.16675 9.75Z"
+                />
+                <path
+                  class="fill-[#f9b700] group-hover:fill-white"
+                  d="M17.5001 9.75H15.8334C15.6124 9.75 15.4004 9.67098 15.2442 9.53033C15.0879 9.38968 15.0001 9.19891 15.0001 9C15.0001 8.80109 15.0879 8.61032 15.2442 8.46967C15.4004 8.32902 15.6124 8.25 15.8334 8.25H17.5001C17.7211 8.25 17.9331 8.32902 18.0893 8.46967C18.2456 8.61032 18.3334 8.80109 18.3334 9C18.3334 9.19891 18.2456 9.38968 18.0893 9.53033C17.9331 9.67098 17.7211 9.75 17.5001 9.75Z"
+                />
+                <path
+                  class="fill-[#f9b700] group-hover:fill-white"
+                  d="M4.69675 14.523C4.53196 14.523 4.37087 14.479 4.23387 14.3966C4.09686 14.3141 3.99008 14.197 3.92702 14.06C3.86396 13.923 3.84746 13.7722 3.8796 13.6267C3.91174 13.4813 3.99107 13.3476 4.10758 13.2427L5.28592 12.1823C5.44308 12.0456 5.65359 11.97 5.87208 11.9717C6.09058 11.9735 6.29959 12.0523 6.4541 12.1914C6.6086 12.3304 6.69624 12.5186 6.69814 12.7152C6.70004 12.9118 6.61605 13.1013 6.46425 13.2427L5.28592 14.3032C5.12967 14.4439 4.91774 14.523 4.69675 14.523Z"
+                />
+                <path
+                  class="fill-[#f9b700] group-hover:fill-white"
+                  d="M14.1251 6.0375C13.9603 6.03747 13.7992 5.99346 13.6622 5.91105C13.5252 5.82864 13.4184 5.71152 13.3553 5.57449C13.2923 5.43747 13.2758 5.28669 13.3079 5.14123C13.3401 4.99576 13.4194 4.86214 13.5359 4.75725L14.7142 3.69675C14.7911 3.62512 14.8831 3.56798 14.9847 3.52867C15.0864 3.48937 15.1958 3.46868 15.3064 3.46781C15.4171 3.46695 15.5268 3.48592 15.6292 3.52363C15.7316 3.56134 15.8247 3.61703 15.9029 3.68745C15.9812 3.75787 16.043 3.84161 16.0849 3.93378C16.1268 4.02596 16.1479 4.12472 16.147 4.2243C16.146 4.32389 16.123 4.4223 16.0793 4.5138C16.0357 4.60531 15.9722 4.68806 15.8926 4.75725L14.7142 5.81775C14.558 5.95841 14.3461 6.03746 14.1251 6.0375Z"
+                />
+              </svg>
+            </ng-template>
+          </span>
+        </label>
+
+        <!--Button Notifications End-->
+        <span
+          class="leading-normal py-1.5 text-sm text-gray-700 font-normal truncate dark:text-white"
+          >Admin main</span
+        >
+        <!--Login & Logout Dropdown start-->
+        <button
+          type="button"
+          class="group flex text-sm bg-gray-700 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300"
+          id="user-menu-button"
+          aria-expanded="false"
+          data-dropdown-toggle="user-dropdown"
+          data-dropdown-placement="bottom"
+        >
+          <span class="sr-only">Open user menu</span>
+          <img
+            class="w-8 h-8 rounded-full opacity-100 group-hover:opacity-90"
+            src="/images/avatars/avatarNeilSims.png"
+            alt="user photo"
+          />
+        </button>
+        <!-- Dropdown Menu Start-->
+        <div
+          class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-200 dark:divide-gray-500 rounded-lg shadow-md border-solid border border-gray-200 w-full min-w-56 max-w-56 dark:border-gray-600 dark:bg-gray-700"
+          id="user-dropdown"
+        >
+          <div class="px-4 py-3">
+            <span class="block text-sm text-gray-900 dark:text-white">Neil Sims</span>
+            <span class="block text-sm text-gray-500 truncate dark:text-gray-300"
+              >user&#64;originsw.com</span
+            >
+          </div>
+          <ul class="py-2" aria-labelledby="user-menu-button">
+            <li>
+              <a
+                routerLink="/profile"
+                class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-primary dark:text-gray-300 dark:hover:text-gray-700"
+              >
+                Mi perfil
+              </a>
+            </li>
+            <li class="mb-2">
+              <a
+                href="#"
+                class="block px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-primary dark:text-gray-300 dark:hover:text-gray-700"
+                >Cerrar sesión</a
+              >
+            </li>
+            <!-- Buton Origin Start -->
+            <div
+              class="flex justify-center gap-2 px-4 py-3 pt-5 border-solid border-0 border-t border-gray-200 dark:border-gray-500"
+            >
+              <span
+                class="text-[10px] uppercase italic font-medium text-blue-700 dark:text-primary dark:!text-primary_dark"
+                >Powered by</span
+              >
+              <img src="/images/logos/logo_origin.svg" alt="Logo Origin" class="w-16 h-auto" />
+            </div>
+            <!-- Buton Origin End -->
+          </ul>
+        </div>
+        <!-- Dropdown Menu End-->
+        <!--Login & Logout Dropdown end-->
+      </div>
+      <!--Elements Container Right Start-->
+    </div>
+    <!--Header Inner End-->
+  </header>
+  <!--Header End-->
+  <!--//////////-->
+  <!--Sidebar Start-->
+  <aside
+    id="sidebar-multi-level-sidebar"
+    class="z-40 lg:z-20 w-full dark:bg-gray-900 max-w-64 fixed top-0 left-0 h-screen pt-0 transition-transform -translate-x-full lg:translate-x-0"
+    aria-label="Sidebar"
+  >
+    <div
+      class="h-full overflow-y-auto scrollbar dark:[color-scheme:dark] px-0 py-0 bg-white dark:bg-gray-900 border-solid border-0 border-r border-r-gray-200 dark:border-r-gray-600"
+    >
+      <!--Logo Lunches Start-->
+      <div class="p-3 pb-0 h-[58px] sticky top-0 z-10 mb-3 bg-white dark:bg-gray-900">
+        <!--Logotipo Client Start-->
+        <a href="/dashboard" class="hover:cursor-pointer">
+          <img src="/images/logos/logo_client.svg" alt="Logo..." class="w-fit h-[46px]" />
+        </a>
+        <!--Logotipo Client End-->
+      </div>
+      <!--Logo Lunches End-->
+      <!--//////////-->
+      <!--Dropdonw Select Client Start-->
+      <div class="p-3">
+        <!--//////////-->
+        <!-- Dropdown Start -->
+        <div class="relative" (click)="toggleDropdown()" #selectContainer>
+          <div
+            class="group hover:cursor-pointer bg-gray-50 hover:bg-gray-100 border border-gray-300 hover:border-primary focus:ring-primary focus:border-primary dark:focus:ring-primary_dark dark:focus:border-primary_dark text-gray-700 font-medium text-base rounded-lg p-2 flex justify-between items-center min-h-12 dark:bg-gray-700 dark:border-gray-600"
+            [innerHTML]="selectedOption || defaultOption"
+          ></div>
+          <ul
+            *ngIf="dropdownVisible"
+            class="absolute z-50 w-full bg-white border-solid border border-gray-300 dark:border-gray-500 shadow-md rounded-lg mt-1 overflow-x-hidden overflow-y-auto p-2 min-h-[66px] max-h-[162px] dark:bg-gray-700"
+          >
+            <li
+              (click)="selectOption('Opción 01', '/images/cover/cover-default.svg')"
+              class="px-2 py-2 hover:bg-gray-100 rounded-md cursor-pointer dark:hover:bg-gray-600"
+            >
+              <div class="flex items-center gap-2">
+                <img
+                  src="/images/cover/cover-default.svg"
+                  alt="..."
+                  class="rounded size-8 overflow-hidden object-cover"
+                />
+                <span class="text-xs font-semibold text-gray-700 dark:text-white">Opción 01</span>
+              </div>
+            </li>
+            <li
+              (click)="selectOption('Opción 02', '/images/cover/cover-default.svg')"
+              class="px-2 py-2 hover:bg-gray-100 rounded-md cursor-pointer dark:hover:bg-gray-600"
+            >
+              <div class="flex items-center gap-2">
+                <img
+                  src="/images/cover/cover-default.svg"
+                  alt="..."
+                  class="rounded size-8 overflow-hidden object-cover"
+                />
+                <span class="text-xs font-semibold text-gray-700 dark:text-white">Opción 02</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Dropdown End -->
+        <!--//////////-->
+      </div>
+      <!--Dropdonw Select Client End-->
+      <!--//////////-->
+      <!--List and bottom Logo Container Start-->
+      <div class="h-[calc(100vh-146px)] flex flex-col justify-between">
+        <!--Menu Start-->
+        <ul class="my-3 flex flex-col gap-3">
+          <!--//////////-->
+          <!--Dashboard Start-->
+          <li>
+            <a
+              routerLink="/dashboard"
+              routerLinkActive="!text-primary dark:!text-primary_dark dark:!bg-gray-800 bg-gray-100"
+              class="group flex items-center gap-1.5 py-3 px-0 text-gray-700 hover:text-primary font-bold text-base dark:text-gray-500 dark:hover:bg-gray-800 dark:hover:text-primary hover:bg-gray-100 transition-all ease-linear duration-150"
+            >
+              <div
+                routerLinkActive="!bg-opacity-100"
+                class="flex h-6 w-1.5 bg-primary dark:bg-primary_dark dark:bg-opacity-0 bg-opacity-0 group-hover:bg-opacity-100 transition-all ease-linear duration-150"
+              ></div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-none size-6">
+                <path
+                  routerLinkActive="!fill-primary dark:!fill-primary_dark"
+                  class="fill-gray-700 dark:fill-gray-500 group-hover:fill-primary"
+                  d="M20.747 11.3636L18.9448 9.56358L12.6371 3.26351C12.4681 3.09478 12.2389 3 12 3C11.7611 3 11.5319 3.09478 11.3629 3.26351L5.05517 9.56358L3.25295 11.3636C3.08881 11.5333 2.99798 11.7607 3.00003 11.9967C3.00209 12.2326 3.09686 12.4584 3.26393 12.6252C3.431 12.7921 3.65701 12.8868 3.89328 12.8888C4.12954 12.8909 4.35717 12.8002 4.52712 12.6362L4.79114 12.3725V19.2C4.79114 19.6774 4.98102 20.1352 5.319 20.4728C5.65698 20.8104 6.11538 21 6.59336 21H10.1978C10.4368 21 10.666 20.9052 10.835 20.7364C11.004 20.5676 11.0989 20.3387 11.0989 20.1V15.5999H12.9011V20.1C12.9011 20.3387 12.996 20.5676 13.165 20.7364C13.334 20.9052 13.5632 21 13.8022 21H17.4066C17.8846 21 18.343 20.8104 18.681 20.4728C19.019 20.1352 19.2089 19.6774 19.2089 19.2V12.3725L19.4729 12.6362C19.6428 12.8002 19.8705 12.8909 20.1067 12.8888C20.343 12.8868 20.569 12.7921 20.7361 12.6252C20.9031 12.4584 20.9979 12.2326 21 11.9967C21.002 11.7607 20.9112 11.5333 20.747 11.3636ZM17.4066 19.2H14.7033V15.5999C14.7033 15.1225 14.5134 14.6647 14.1755 14.3271C13.8375 13.9896 13.3791 13.7999 12.9011 13.7999H11.0989C10.6209 13.7999 10.1625 13.9896 9.82453 14.3271C9.48655 14.6647 9.29668 15.1225 9.29668 15.5999V19.2H6.59336V10.5725L12 5.17243L17.4066 10.5725V19.2Z"
+                />
+              </svg>
+              <span class="">Dashboard</span>
+            </a>
+          </li>
+          <!--Dashboard End-->
+          <!--//////////-->
+          <!--Starter Kit Start-->
+          <li>
+            <button
+              routerLink="/starter-kit"
+              routerLinkActive="!text-primary dark:!text-primary_dark dark:!bg-gray-800 !bg-gray-100"
+              type="button"
+              class="w-full group relative flex items-center gap-1.5 py-3 px-0 text-gray-700 hover:text-primary font-bold text-base bg-white hover:bg-gray-100 transition-all ease-linear duration-150 dark:bg-gray-900 dark:text-gray-500 dark:hover:bg-gray-800 dark:hover:text-primary"
+              aria-controls="dropdown-starter-kit"
+              data-collapse-toggle="dropdown-starter-kit"
+            >
+              <div
+                routerLinkActive="!bg-opacity-100"
+                class="flex h-6 w-1.5 bg-primary dark:bg-primary_dark dark:bg-opacity-0 bg-opacity-0 group-hover:bg-opacity-100 transition-all ease-linear duration-150"
+              ></div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="fill-none size-6" viewBox="0 0 24 24">
+                <path
+                  routerLinkActive="!fill-primary dark:!fill-primary_dark"
+                  class="fill-gray-700 dark:fill-gray-500 group-hover:fill-primary"
+                  d="M20.979 12.894C20.981 12.857 20.981 12.82 20.979 12.783L18.979 3.783C18.9295 3.56044 18.8055 3.36146 18.6274 3.21905C18.4494 3.07665 18.228 2.99936 18 3H6C5.77234 2.99982 5.55144 3.07731 5.3738 3.21968C5.19615 3.36205 5.0724 3.56077 5.023 3.783L3.023 12.783C3.02101 12.82 3.02101 12.857 3.023 12.894C3.01321 12.9288 3.00553 12.9642 3 13V19C3 19.5304 3.21071 20.0391 3.58579 20.4142C3.96086 20.7893 4.46957 21 5 21H19C19.5304 21 20.0391 20.7893 20.4142 20.4142C20.7893 20.0391 21 19.5304 21 19V13C20.9951 12.9643 20.9881 12.9289 20.979 12.894ZM6.8 5H17.2L18.755 12H16.562C16.1739 12.0012 15.7945 12.1153 15.4701 12.3283C15.1457 12.5414 14.8902 12.8443 14.735 13.2C14.5056 13.7354 14.1241 14.1917 13.6379 14.5124C13.1516 14.8331 12.582 15.004 11.9995 15.004C11.417 15.004 10.8474 14.8331 10.3611 14.5124C9.87485 14.1917 9.49339 13.7354 9.264 13.2C9.10945 12.844 8.85435 12.5408 8.53 12.3276C8.20564 12.1145 7.82613 12.0006 7.438 12H5.247L6.8 5ZM19 19H5V14H7.431C7.81622 14.8917 8.45402 15.6512 9.26574 16.1848C10.0775 16.7184 11.0276 17.0027 11.999 17.0027C12.9704 17.0027 13.9205 16.7184 14.7323 16.1848C15.544 15.6512 16.1818 14.8917 16.567 14H19V19Z"
+                />
+                <path
+                  routerLinkActive="!fill-primary dark:!fill-primary_dark"
+                  class="fill-gray-700 dark:fill-gray-500 group-hover:fill-primary"
+                  d="M9 8H15C15.2652 8 15.5196 7.89465 15.7071 7.70711C15.8946 7.51957 16 7.26522 16 7C16 6.73479 15.8946 6.48043 15.7071 6.2929C15.5196 6.10536 15.2652 6 15 6H9C8.73478 6 8.48043 6.10536 8.29289 6.2929C8.10536 6.48043 8 6.73479 8 7C8 7.26522 8.10536 7.51957 8.29289 7.70711C8.48043 7.89465 8.73478 8 9 8Z"
+                />
+                <path
+                  routerLinkActive="!fill-primary dark:!fill-primary_dark"
+                  class="fill-gray-700 dark:fill-gray-500 group-hover:fill-primary"
+                  d="M8 11H16C16.2652 11 16.5196 10.8946 16.7071 10.7071C16.8946 10.5196 17 10.2652 17 10C17 9.73479 16.8946 9.48043 16.7071 9.2929C16.5196 9.10536 16.2652 9 16 9H8C7.73478 9 7.48043 9.10536 7.29289 9.2929C7.10536 9.48043 7 9.73479 7 10C7 10.2652 7.10536 10.5196 7.29289 10.7071C7.48043 10.8946 7.73478 11 8 11Z"
+                />
+              </svg>
+              <span class="">Starter kit</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="none"
+                class="absolute right-3 fill-none size-5"
+              >
+                <path
+                  routerLinkActive="!fill-primary dark:!fill-primary_dark"
+                  class="fill-gray-700 group-hover:fill-primary"
+                  d="M10.0137 13.3333C9.70429 13.3332 9.40759 13.2164 9.18885 13.0084L4.52219 8.57304C4.41076 8.47075 4.32188 8.3484 4.26073 8.21312C4.19959 8.07783 4.16741 7.93233 4.16606 7.7851C4.16471 7.63787 4.19423 7.49186 4.25289 7.35559C4.31155 7.21931 4.39818 7.09551 4.50772 6.9914C4.61727 6.88729 4.74753 6.80495 4.89091 6.7492C5.03428 6.69344 5.18791 6.66539 5.34282 6.66667C5.49773 6.66795 5.65082 6.69854 5.79316 6.75665C5.93549 6.81476 6.06423 6.89924 6.17185 7.00514L10.0137 10.6566L13.8555 7.00514C14.0756 6.80316 14.3703 6.69139 14.6762 6.69392C14.982 6.69645 15.2747 6.81306 15.491 7.01865C15.7073 7.22424 15.83 7.50235 15.8326 7.79308C15.8353 8.08382 15.7177 8.36391 15.5052 8.57304L10.8385 13.0084C10.6198 13.2164 10.3231 13.3332 10.0137 13.3333Z"
+                />
+              </svg>
+            </button>
+            <ul id="dropdown-starter-kit" class="hidden py-2 px-3 space-y-2">
+              <li>
+                <a
+                  routerLink="starter-kit/template-components"
+                  routerLinkActive="!text-primary dark:!text-primary_dark !bg-gray-100 dark:!bg-gray-700"
+                  class="flex items-center w-full p-2 text-gray-700 hover:text-primary transition duration-75 rounded-lg pl-8 group hover:bg-gray-100 font-medium text-base dark:text-gray-400 dark:hover:text-primary dark:hover:bg-gray-800"
+                >
+                  Components
+                </a>
+              </li>
+              <li>
+                <a
+                  routerLink="starter-kit/template-cards"
+                  routerLinkActive="!text-primary dark:!text-primary_dark !bg-gray-100 dark:!bg-gray-700"
+                  class="flex items-center w-full p-2 text-gray-700 hover:text-primary transition duration-75 rounded-lg pl-8 group hover:bg-gray-100 font-medium text-base dark:text-gray-400 dark:hover:text-primary dark:hover:bg-gray-800"
+                >
+                  Cards
+                </a>
+              </li>
+              <li>
+                <a
+                  routerLink="starter-kit/grids"
+                  routerLinkActive="!text-primary dark:!text-primary_dark !bg-gray-100 dark:!bg-gray-700"
+                  class="flex items-center w-full p-2 text-gray-700 hover:text-primary transition duration-75 rounded-lg pl-8 group hover:bg-gray-100 font-medium text-base dark:text-gray-400 dark:hover:text-primary dark:hover:bg-gray-800"
+                >
+                  Grids
+                </a>
+              </li>
+              <li>
+                <a
+                  routerLink="starter-kit/dark-mode-demo"
+                  routerLinkActive="!text-primary dark:!text-primary_dark !bg-gray-100 dark:!bg-gray-700"
+                  class="flex items-center w-full p-2 text-gray-700 hover:text-primary transition duration-75 rounded-lg pl-8 group hover:bg-gray-100 font-medium text-base dark:text-gray-400 dark:hover:text-primary dark:hover:bg-gray-800"
+                >
+                  Dark mode
+                </a>
+              </li>
+            </ul>
+          </li>
+          <!--Starter Kit End-->
+          <!--//////////-->
+          <!--Disabled Start-->
+          <li>
+            <a
+              href="#"
+              aria-disabled="true"
+              class="group flex items-center gap-1.5 py-3 px-0 text-gray-400 cursor-not-allowed font-bold text-base bg-white hover:bg-gray-100 transition-all ease-linear duration-150 pointer-events-none dark:bg-gray-900 dark:text-gray-700"
+            >
+              <div
+                class="flex h-6 w-1.5 bg-primary dark:bg-primary_dark dark:bg-opacity-0 bg-opacity-0 group-hover:bg-opacity-100 transition-all ease-linear duration-150"
+              ></div>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-none size-6">
+                <path
+                  class="fill-gray-400 dark:fill-gray-700 group-hover:fill-primary"
+                  d="M20 18H5V5C5 4.448 4.552 4 4 4C3.448 4 3 4.448 3 5V19C3 19.552 3.448 20 4 20H20C20.552 20 21 19.552 21 19C21 18.448 20.552 18 20 18Z"
+                />
+                <path
+                  class="fill-gray-400 dark:fill-gray-700 group-hover:fill-primary"
+                  d="M6.999 15C7.303 15 7.603 14.862 7.8 14.6L10.109 11.522L13.294 14.707C13.685 15.098 14.317 15.098 14.708 14.707L18 11.414V12.207C18 12.759 18.448 13.207 19 13.207C19.552 13.207 20 12.759 20 12.207V9C20 8.87 19.973 8.74 19.923 8.618C19.822 8.374 19.627 8.179 19.382 8.077C19.26 8.027 19.13 8 19 8H15.793C15.241 8 14.793 8.448 14.793 9C14.793 9.552 15.241 10 15.793 10H16.586L14 12.586L10.707 9.293C10.502 9.087 10.216 8.982 9.929 9.002C9.64 9.023 9.374 9.168 9.2 9.4L6.2 13.4C5.868 13.842 5.958 14.469 6.4 14.8C6.58 14.935 6.791 15 6.999 15Z"
+                />
+              </svg>
+              <span class="">Disabled</span>
+            </a>
+          </li>
+          <!--Disabled End-->
+          <!--//////////-->
+          <!--Divider Start-->
+          <div
+            class="w-full border-solid border-0 border-b border-gray-200 dark:border-gray-600"
+          ></div>
+          <!--Divider End-->
+          <!--//////////-->
+          <!--Ayuda Start-->
+          <li>
+            <a
+              routerLink="/help"
+              routerLinkActive="!text-primary dark:!text-primary_dark dark:!bg-gray-800 !bg-gray-100"
+              class="group flex items-center gap-1.5 py-3 px-0 text-gray-700 hover:text-primary font-bold text-base bg-white hover:bg-gray-100 transition-all ease-linear duration-150 dark:bg-gray-900 dark:text-gray-500 dark:hover:bg-gray-800 dark:hover:text-primary"
+            >
+              <div
+                routerLinkActive="!bg-opacity-100"
+                class="flex h-6 w-1.5 bg-primary dark:bg-primary_dark dark:bg-opacity-0 bg-opacity-0 group-hover:bg-opacity-100 transition-all ease-linear duration-150"
+              ></div>
+
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-none size-6">
+                <path
+                  routerLinkActive="!fill-primary dark:!fill-primary_dark"
+                  class="fill-gray-700 dark:fill-gray-500 group-hover:fill-primary"
+                  d="M21.9976 12.268C22.0496 10.33 21.5336 8.51001 20.6146 6.95001C20.8606 6.55701 20.9976 6.10501 20.9976 5.63001C20.9976 4.96201 20.7376 4.33501 20.2656 3.86201L20.1386 3.73501C19.3296 2.92501 18.0096 2.81701 17.0546 3.39101C15.6456 2.55701 14.0186 2.05001 12.2686 2.00201C10.3226 1.96001 8.50359 2.47701 6.94659 3.39201C5.99059 2.81701 4.67259 2.92601 3.86259 3.73501L3.73559 3.86201C2.89859 4.69901 2.78559 5.98501 3.38659 6.95001C2.55559 8.35701 2.05059 9.98101 2.00359 11.732C1.95159 13.67 2.46759 15.49 3.38659 17.05C3.14059 17.443 3.00359 17.895 3.00359 18.37C3.00359 19.038 3.26359 19.665 3.73559 20.138L3.86259 20.265C4.33559 20.738 4.96259 20.997 5.63059 20.997C6.10759 20.997 6.56059 20.859 6.95359 20.612C8.36159 21.444 9.98559 21.95 11.7336 21.997C11.8236 21.999 11.9136 22 12.0036 22C13.8406 22 15.5616 21.488 17.0476 20.612C17.4406 20.859 17.8936 20.997 18.3706 20.997C19.0386 20.997 19.6656 20.737 20.1386 20.265L20.2656 20.138C21.1036 19.3 21.2166 18.012 20.6126 17.047C21.4446 15.639 21.9506 14.016 21.9976 12.268ZM18.0186 5.14801C18.1456 5.02101 18.2936 5.00201 18.3716 5.00201C18.4496 5.00201 18.5976 5.02101 18.7256 5.14801L18.8526 5.27501C19.0466 5.47001 19.0466 5.78701 18.8526 5.98201L15.9246 8.91001C15.8926 8.87001 15.8486 8.84101 15.8156 8.80201C15.6186 8.56701 15.4006 8.35301 15.1636 8.15701C15.1356 8.13401 15.1146 8.10301 15.0856 8.08001L18.0186 5.14801ZM11.9986 4.00001C12.0696 4.00001 12.1426 4.00101 12.2146 4.00301C13.4006 4.03501 14.5146 4.33101 15.5136 4.82501L13.1906 7.14801C12.8506 7.06501 12.4986 7.01101 12.1346 7.00101C11.6816 6.99201 11.2486 7.06201 10.8286 7.16501L8.48659 4.82301C9.54959 4.30001 10.7406 4.00001 11.9986 4.00001ZM14.9996 12.08C14.9896 12.436 14.9066 12.772 14.7836 13.087C14.7826 13.089 14.7806 13.093 14.7806 13.093C14.4726 13.87 13.8626 14.489 13.1036 14.788C13.0916 14.793 13.0826 14.801 13.0716 14.806C12.7136 14.943 12.3256 15.014 11.9216 14.998C11.5666 14.989 11.2326 14.907 10.9196 14.784C10.9156 14.782 10.9126 14.779 10.9086 14.778C10.3396 14.553 9.85959 14.163 9.52359 13.675C9.51359 13.661 9.50159 13.649 9.49159 13.634C9.38559 13.474 9.29659 13.302 9.22459 13.123C9.07359 12.751 8.99159 12.345 9.00359 11.918C9.01359 11.565 9.09359 11.232 9.21459 10.92C9.21659 10.914 9.22059 10.91 9.22359 10.904C9.52859 10.133 10.1326 9.52001 10.8836 9.21701C11.2286 9.07901 11.6056 9.00001 12.0006 9.00001C12.0266 9.00001 12.0546 9.00001 12.0806 9.00101C12.4356 9.01001 12.7696 9.09201 13.0826 9.21401C13.0866 9.21601 13.0896 9.21901 13.0946 9.22001C13.6626 9.44501 14.1426 9.83401 14.4786 10.322C14.4886 10.337 14.5016 10.349 14.5116 10.364C14.6186 10.525 14.7086 10.698 14.7806 10.879C14.9306 11.25 15.0106 11.655 14.9996 12.08ZM5.14959 5.27601L5.27659 5.14901C5.40459 5.02101 5.55359 5.00301 5.63059 5.00301C5.70759 5.00301 5.85659 5.02201 5.98459 5.14901L8.91059 8.07601C8.86259 8.11401 8.82859 8.16601 8.78259 8.20501C8.56359 8.39101 8.36459 8.59501 8.17959 8.81501C8.15059 8.85101 8.11059 8.87701 8.08159 8.91401L5.14959 5.98301C5.02159 5.85501 5.00359 5.70701 5.00359 5.63001C5.00359 5.55301 5.02159 5.40401 5.14959 5.27601ZM4.00359 11.786C4.03559 10.6 4.33159 9.48501 4.82459 8.48601L7.14859 10.81C7.06559 11.15 7.01159 11.502 7.00159 11.866C6.98959 12.32 7.05859 12.755 7.16159 13.176L4.82859 15.509C4.27559 14.386 3.96759 13.123 4.00359 11.786ZM5.98259 18.852C5.85559 18.979 5.70759 18.998 5.62959 18.998C5.55159 18.998 5.40359 18.979 5.27559 18.852L5.14859 18.725C4.95459 18.53 4.95459 18.213 5.14859 18.018L8.07559 15.091C8.10759 15.131 8.15159 15.16 8.18459 15.199C8.38159 15.434 8.59959 15.648 8.83659 15.844C8.86459 15.867 8.88559 15.898 8.91459 15.921L5.98259 18.852ZM11.7866 19.997C10.6006 19.965 9.48659 19.669 8.48759 19.175L10.8106 16.852C11.1506 16.935 11.5026 16.989 11.8666 16.999C11.9116 17 11.9566 17 12.0016 17C12.4096 17 12.8006 16.936 13.1816 16.843L15.5256 19.187C14.4016 19.74 13.1346 20.043 11.7866 19.997ZM18.8516 18.724L18.7246 18.851C18.5966 18.979 18.4486 18.997 18.3706 18.997C18.2926 18.997 18.1446 18.978 18.0166 18.851L15.0896 15.924C15.1326 15.89 15.1636 15.843 15.2056 15.807C15.4356 15.613 15.6456 15.4 15.8376 15.168C15.8616 15.138 15.8946 15.116 15.9186 15.086L18.8506 18.017C18.9786 18.145 18.9966 18.293 18.9966 18.371C18.9966 18.449 18.9796 18.596 18.8516 18.724ZM19.1816 15.518L16.8526 13.189C16.9356 12.849 16.9906 12.498 17.0006 12.135V12.134C17.0126 11.68 16.9436 11.245 16.8406 10.824L19.1736 8.49101C19.7276 9.61401 20.0356 10.877 19.9996 12.214C19.9656 13.399 19.6716 14.516 19.1816 15.518Z"
+                />
+              </svg>
+
+              <span class="">Ayuda</span>
+            </a>
+          </li>
+          <!--Ayuda End-->
+          <!--//////////-->
+        </ul>
+        <!--Menu End-->
+        <!--//////////-->
+        <!--Powered By Origin Start-->
+        <div
+          class="flex flex-col gap-1 w-full p-3 bg-white dark:bg-gray-900 border-solid border-0 sticky bottom-0 z-10"
+        >
+          <p class="w-fit m-0 p-0 text-[11px] text-blue-700 uppercase italic font-medium">
+            Powered by
+          </p>
+          <img
+            alt="logo Powered by Origin"
+            src="images/logos/logo_origin.svg"
+            class="w-24 h-auto"
+          />
+        </div>
+        <!--Powered By Origin End-->
+      </div>
+      <!--List and bottom Logo Container Start-->
+      <!--//////////-->
+    </div>
+  </aside>
+  <!--Sidebar End-->
+  <!--//////////-->
+  <!--Drawer Notifications Start-->
+  <div
+    id="drawer-right-example"
+    class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800"
+    tabindex="-1"
+    aria-labelledby="drawer-right-label"
+  >
+    <!--//////////-->
+    <!--Notifications Header Start-->
+    <div class="flex flex-row justify-between pb-6">
+      <h5
+        id="drawer-right-label"
+        class="inline-flex items-center text-gray-700 font-bold text-base dark:text-white"
+      >
+        Notificaciones
+      </h5>
+      <button
+        type="button"
+        data-drawer-hide="drawer-right-example"
+        aria-controls="drawer-right-example"
+        class="text-gray-700 bg-gray-100 hover:bg-gray-200 hover:text-primary dark:!text-primary_dark rounded-lg text-sm w-8 h-8 inline-flex items-center justify-center dark:bg-gray-600 dark:text-white dark:hover:text-primary dark:!text-primary_dark dark:hover:bg-gray-700"
+      >
+        <svg
+          class="w-3 h-3"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 14"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+          />
+        </svg>
+        <span class="sr-only">Close menu</span>
+      </button>
+    </div>
+    <!--Notifications Header End-->
+    <!--//////////-->
+    <!--Notifications Body Start-->
+    <div class="flex flex-col">
+      <!--No Notifications Start-->
+      <div *ngIf="notifications.length === 0" class="flex flex-col gap-6 items-center mt-8">
+        <div class="bg-gray-100 rounded-xl size-52 flex justify-center items-center">
+          <!--Illustration start-->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            viewBox="0 0 208 208"
+            class="size-44"
+          >
+            <circle class="fill-gray-200" cx="104" cy="104" r="104" />
+            <path
+              class="fill-primary opacity-85"
+              d="M183.52,146.16v3.57H24.47v-3.57c0-3.79,3.07-6.86,6.85-6.86,9.25,0,16.75-7.5,16.75-16.73v-40.99c0-15.44,6.26-29.43,16.39-39.55,6.06-6.06,13.5-10.74,21.83-13.52,2.71-.91,5.51-1.61,8.39-2.08,3.04-.53,6.16-.79,9.33-.79s6.3.26,9.33.79c2.88.46,5.68,1.17,8.39,2.08,22.2,7.43,38.21,28.38,38.21,53.07v40.99c0,9.23,7.5,16.73,16.73,16.73,3.79,0,6.86,3.07,6.86,6.86Z"
+            />
+            <path
+              class="fill-gray-800"
+              d="M121.94,25.64c0,.98-.09,1.94-.22,2.87-2.71-.91-5.51-1.61-8.39-2.08.02-.26.03-.53.03-.79,0-5.16-4.2-9.37-9.37-9.37s-9.37,4.2-9.37,9.37c0,.26.02.53.03.79-2.88.46-5.68,1.17-8.39,2.08-.14-.93-.22-1.89-.22-2.87,0-9.9,8.05-17.95,17.95-17.95s17.95,8.05,17.95,17.95Z"
+            />
+            <rect class="fill-gray-800" x="24.47" y="146.15" width="159.06" height="3.58" />
+            <path
+              class="fill-primary opacity-50"
+              d="M136.42,149.73c-5.37,12.59-17.86,21.41-32.43,21.41s-27.06-8.82-32.43-21.41h64.86Z"
+            />
+            <path
+              class="fill-gray-800"
+              d="M104,203.35c-.95,0-1.72-.77-1.72-1.72v-18.94c0-.95.77-1.72,1.72-1.72s1.72.77,1.72,1.72v18.94c0,.95-.77,1.72-1.72,1.72Z"
+            />
+            <path
+              class="fill-gray-800"
+              d="M47.85,176.13c-.44,0-.88-.17-1.21-.5-.67-.67-.67-1.76,0-2.43l13.39-13.39c.67-.67,1.76-.67,2.43,0s.67,1.76,0,2.43l-13.39,13.39c-.34.34-.77.5-1.21.5Z"
+            />
+            <path
+              class="fill-gray-800"
+              d="M160.14,176.13c-.44,0-.88-.17-1.21-.5l-13.39-13.39c-.67-.67-.67-1.76,0-2.43s1.76-.67,2.43,0l13.39,13.39c.67.67.67,1.76,0,2.43-.34.34-.77.5-1.21.5Z"
+            />
+          </svg>
+          <!--Illustration End-->
+        </div>
+        <p class="text-base text-gray-700 font-medium text-center">
+          ¡No hay notificaciones en este momento!
+        </p>
+        <span class="text-sm text-gray-700 text-center">
+          Aquí aparecerán las próximas notificaciones.
+        </span>
+      </div>
+      <!--No Notifications End-->
+      <!--Notification list start-->
+      <div *ngIf="notifications.length > 0" class="flex flex-col gap-3">
+        <li
+          *ngFor="let n of notifications; let i = index"
+          class="group inline-flex gap-3 list-none bg-gray-100 hover:bg-gray-200 rounded-lg py-2 px-2 text-gray-600 font-normal text-sm h-16 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <span
+            class="min-w-12 max-w-12 min-h-12 max-h-12 flex justify-center items-center bg-gray-200 group-hover:bg-gray-300 dark:group-hover:bg-gray-300 dark:bg-gray-600 rounded-md"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="fill-none size-8">
+              <path
+                class="fill-gray-600 dark:fill-gray-200 dark:group-hover:fill-primary group-hover:fill-primary"
+                d="M16 28C13.6266 28 11.3066 27.2962 9.33316 25.9776C7.35977 24.6591 5.8217 22.7849 4.91345 20.5922C4.0052 18.3995 3.76756 15.9867 4.23058 13.6589C4.6936 11.3311 5.83649 9.19295 7.51472 7.51472C9.19295 5.83649 11.3311 4.6936 13.6589 4.23058C15.9867 3.76756 18.3995 4.0052 20.5922 4.91345C22.7849 5.8217 24.6591 7.35977 25.9776 9.33316C27.2962 11.3066 28 13.6266 28 16C27.9965 19.1815 26.7311 22.2317 24.4814 24.4814C22.2317 26.7311 19.1815 27.9965 16 28ZM16 6.40001C14.1013 6.40001 12.2452 6.96304 10.6665 8.0179C9.08782 9.07276 7.85736 10.5721 7.13076 12.3262C6.40416 14.0804 6.21405 16.0107 6.58447 17.8729C6.95488 19.7351 7.8692 21.4456 9.21178 22.7882C10.5544 24.1308 12.2649 25.0451 14.1271 25.4155C15.9894 25.786 17.9196 25.5958 19.6738 24.8692C21.4279 24.1426 22.9272 22.9122 23.9821 21.3335C25.037 19.7548 25.6 17.8987 25.6 16C25.5971 13.4548 24.5848 11.0147 22.7851 9.21494C20.9853 7.41521 18.5452 6.40286 16 6.40001Z"
+              />
+              <path
+                class="fill-gray-600 dark:fill-gray-200 dark:group-hover:fill-primary group-hover:fill-primary"
+                d="M16 18.4C15.6817 18.4 15.3765 18.2736 15.1515 18.0485C14.9264 17.8235 14.8 17.5183 14.8 17.2V11.2C14.8 10.8817 14.9264 10.5765 15.1515 10.3515C15.3765 10.1264 15.6817 10 16 10C16.3183 10 16.6235 10.1264 16.8485 10.3515C17.0736 10.5765 17.2 10.8817 17.2 11.2V17.2C17.2 17.5183 17.0736 17.8235 16.8485 18.0485C16.6235 18.2736 16.3183 18.4 16 18.4Z"
+              />
+              <path
+                class="fill-gray-600 dark:fill-gray-200 dark:group-hover:fill-primary group-hover:fill-primary"
+                d="M16 22C16.6627 22 17.2 21.4627 17.2 20.8C17.2 20.1373 16.6627 19.6 16 19.6C15.3373 19.6 14.8 20.1373 14.8 20.8C14.8 21.4627 15.3373 22 16 22Z"
+              />
+            </svg>
+          </span>
+          <span class="truncate whitespace-normal line-clamp-2 h-10 my-auto">
+            {{ n.mensaje }}
+          </span>
+          <button
+            type="button"
+            (click)="deleteNotification(i)"
+            class="my-auto text-gray-600 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-300 inline-flex items-center justify-center min-w-7 max-w-7 min-h-7 max-h-7 dark:text-gray-400"
+          >
+            <span class="sr-only">Close</span>
+            <svg
+              class="w-3 h-3"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+              />
+            </svg>
+          </button>
+        </li>
+      </div>
+      <!--Notification list end-->
+    </div>
+    <!--Notifications Body End-->
+    <!--//////////-->
+  </div>
+  <!--Drawer Notifications End-->
+  <!--//////////-->
+  <!--Inner Container Start-->
+  <section
+    class="w-full bg-white px-7 py-4 lg:pl-[284px] min-h-[calc(100vh-58px)] dark:bg-gray-900"
+  >
+    <router-outlet></router-outlet>
+  </section>
+  <!--Inner Container End-->
+  <!--//////////-->
+</main>
+<!--Main Layout End-->

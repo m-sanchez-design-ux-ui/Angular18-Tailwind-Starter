@@ -1,0 +1,666 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*
+____ ____ _ ____ _ _  _    ____ ____ _   _  _ ___ _ ____ _  _ ____
+|  | |__/ | | __ | |\ |    [__  |  | |   |  |  |  | |  | |\ | [__ 
+|__| |  \ | |__] | | \|    ___] |__| |__ |__|  |  | |__| | \| ___]
+ 
+*/
+
+/*----Import css for tailwind----*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*----Import css for tailwind----*/
+/*----------Weight 100-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Thin.ttf");
+  src: url("../public/fonts/Montserrat-Thin.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 200-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-ExtraLight.ttf");
+  src: url("../public/fonts/Montserrat-ExtraLight.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 300-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Light.ttf");
+  src: url("../public/fonts/Montserrat-Light.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 400-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Regular.ttf");
+  src: url("../public/fonts/Montserrat-Regular.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 500-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Medium.ttf");
+  src: url("../public/fonts/Montserrat-Medium.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 600-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-SemiBold.ttf");
+  src: url("../public/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 700-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Bold.ttf");
+  src: url("../public/fonts/Montserrat-Bold.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 800-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-ExtraBold.ttf");
+  src: url("../public/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Weight 900-----------*/
+@font-face {
+  font-family: "Montserrat";
+  src: url("../public/fonts/Montserrat-Black.ttf");
+  src: url("../public/fonts/Montserrat-Black.ttf") format("truetype");
+  /* You can add more fonts formats here */
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+/*----------Custom Fonts---------*/
+
+/*----------Variables CSS----------*/
+:root {
+  --color-primary:#0d6efd;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary-loading-shadow-100: rgba(13, 110, 253, 1);
+  --color-primary-loading-shadow-50: rgba(13, 110, 253, 0.5);
+  --color-primary-loading-shadow-0: rgba(13, 110, 253, 0);
+  --width-flatpicker-card: 340px;
+}
+
+.dark {
+  --color-primary:#609ff2;
+}
+
+/*----------Variables CSS----------*/
+
+/*----------Selection Color On Proyect----------*/
+::selection {
+  background: var(--color-primary);
+  color: var(--color-white); 
+}
+/*----------Selection Color On Proyect----------*/
+
+/*----------Color Datepicker Flowbite---------*/
+.datepicker-cell.selected {
+  @apply bg-primary dark:bg-primary_dark text-white;
+}
+/*----------Color Datepicker Flowbite---------*/
+
+/*------------Styles for Flatpickr Datepicker-------------*/
+.flatpickr-calendar {
+  @apply rounded-lg shadow-lg border-solid border border-gray-200 bg-white p-4 text-sm font-Montserrat dark:bg-gray-800 dark:border dark:border-gray-700 dark:text-white;
+  width: var(--width-flatpicker-card);
+}
+
+.flatpickr-months {
+  @apply mb-0;
+}
+
+.flatpickr-month {
+  @apply pb-2 pt-0.5 min-h-12;
+}
+
+.flatpickr-weekday {
+  @apply text-gray-400 font-semibold uppercase text-xs;
+}
+
+.flatpickr-day {
+  @apply rounded-md hover:bg-gray-100 cursor-pointer transition-all duration-150 ease-in-out;
+}
+
+.flatpickr-day.selected {
+  @apply bg-primary dark:bg-primary_dark bg-opacity-100 text-white border-none;
+}
+
+.flatpickr-day.selected:hover {
+  @apply bg-primary dark:bg-primary_dark bg-opacity-90 text-white border-none;
+}
+
+.flatpickr-day.nextMonthDay.selected,
+.flatpickr-day.prevMonthDay.selected {
+  @apply bg-primary dark:bg-primary_dark bg-opacity-100 text-white border-none;
+}
+
+.flatpickr-day.nextMonthDay.selected:hover,
+.flatpickr-day.prevMonthDay.selected:hover {
+  @apply bg-primary dark:bg-primary_dark bg-opacity-90 text-white border-none;
+}
+
+.flatpickr-day.today {
+  @apply border border-primary bg-white dark:bg-gray-600 ;
+}
+
+.flatpickr-day.today:hover {
+  @apply border border-primary bg-gray-100 text-gray-900 dark:bg-gray-500 ;
+}
+
+.flatpickr-innerContainer {
+  @apply border-b-0 dark:bg-gray-800;
+}
+
+.flatpickr-months .flatpickr-month {
+  @apply bg-transparent;
+}
+
+.flatpickr-months {
+  @apply relative;
+}
+
+.flatpickr-months .flatpickr-prev-month {
+  @apply absolute top-0 left-0 bg-transparent rounded-lg fill-none stroke-gray-900 stroke-1 h-9 flex justify-center items-center dark:stroke-gray-400;
+}
+
+.flatpickr-months .flatpickr-next-month {
+  @apply absolute top-0 right-0 bg-transparent rounded-lg fill-none stroke-gray-900 stroke-1 dark:stroke-gray-400;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover,
+.flatpickr-months .flatpickr-next-month:hover {
+  @apply bg-gray-100 dark:bg-gray-600;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+  @apply bg-gray-100 dark:bg-gray-600;
+}
+
+.flatpickr-day {
+  @apply text-gray-900 font-semibold text-sm border-0 dark:text-white;
+}
+
+.flatpickr-day:hover {
+  @apply bg-gray-100 border-0 dark:bg-gray-600;
+}
+
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay {
+  @apply text-gray-400 border-0;
+}
+
+.flatpickr-day.prevMonthDay:hover,
+.flatpickr-day.nextMonthDay:hover {
+  @apply bg-gray-100 border-0;
+}
+
+.flatpickr-weekdays {
+  @apply bg-transparent;
+}
+
+span.flatpickr-weekday {
+  @apply text-sm font-medium text-gray-500 bg-transparent capitalize;
+}
+
+.flatpickr-days {
+  @apply border-l-0 border-r-0;
+}
+
+.flatpickr-calendar.arrowTop:before,
+.flatpickr-calendar.arrowBottom:before,
+.flatpickr-calendar.arrowTop:after,
+.flatpickr-calendar.arrowBottom:after {
+  @apply border-transparent hidden;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  @apply rounded-lg py-1 px-2.5 h-full bg-transparent text-sm font-semibold text-gray-900 dark:text-white;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months:hover,
+.flatpickr-current-month .flatpickr-monthDropdown-months:focus {
+  @apply bg-gray-100 text-gray-900 dark:text-gray-500 dark:bg-gray-700;
+}
+
+.flatpickr-current-month {
+  @apply p-0 flex gap-2;
+}
+
+/* ICONO FLECHA DROPDOWN */
+.flatpickr-current-month .flatpickr-monthDropdown-months,
+.flatpickr-current-month .flatpickr-monthDropdown-months:hover {
+  @apply appearance-none bg-no-repeat pr-8;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="111827" height="16" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M5.516 7.548l4.484 4.473 4.484-4.473L15 9l-5 5-5-5z"/></svg>');
+  background-position: right 0.5rem center; 
+}
+
+.flatpickr-current-month input.cur-year {
+  @apply rounded-lg py-1 px-2.5 h-full bg-transparent text-sm font-semibold text-gray-900 dark:text-white;
+  height: 34px;
+}
+
+.flatpickr-current-month input.cur-year:hover {
+  @apply rounded-lg py-1 px-2.5 h-full text-sm font-semibold text-gray-900 border-0 gap-0 dark:bg-gray-700 dark:text-white;
+}
+
+.numInputWrapper:hover {
+  @apply rounded-lg bg-gray-100 dark:bg-gray-700;
+  height: 34px;
+}
+
+.numInputWrapper:hover > .arrowUp {
+  @apply bg-gray-200 border-0 rounded-tl-none rounded-tr-md;
+}
+
+.numInputWrapper:hover > .arrowDown {
+  @apply bg-gray-200 border-0 rounded-bl-none rounded-br-md;
+}
+
+.numInputWrapper:hover > .arrowUp:hover,
+.numInputWrapper:hover > .arrowDown:hover {
+  @apply bg-gray-300;
+}
+/*------------Styles for Flatpickr Datepicker-------------*/
+
+/*------------Styles for DataTable Backoffice-------------*/
+.table {
+  @apply w-full;
+}   
+
+table.dataTable.stripe > tbody > tr:nth-child(odd) > *, table.dataTable.display > tbody > tr:nth-child(odd) > * {
+  @apply bg-gray-50 hover:bg-gray-100 dark:bg-gray-800;
+}
+
+table.dataTable.stripe > tbody > tr:nth-child(even) > *, table.dataTable.display > tbody > tr:nth-child(even) > * {
+  @apply bg-white hover:bg-gray-100 dark:bg-gray-800;
+}
+
+table.dataTable.order-column > tbody tr > .sorting_1, table.dataTable.order-column > tbody tr > .sorting_2, table.dataTable.order-column > tbody tr > .sorting_3, table.dataTable.display > tbody tr > .sorting_1, table.dataTable.display > tbody tr > .sorting_2, table.dataTable.display > tbody tr > .sorting_3 {
+  @apply bg-gray-100 hover:bg-gray-200 dark:bg-gray-700;
+}
+
+.datatable__body tr td {
+  @apply !p-4 !text-left !text-gray-700 !text-xs !font-semibold dark:!text-white;
+}
+
+table.dataTable > thead > tr > th, table.dataTable > thead > tr > td {
+  @apply bg-white p-4 border-b-primary border-opacity-50 uppercase font-semibold !text-left text-xs dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500; 
+}
+
+div.dt-container.dt-empty-footer tbody > tr:last-child > * {
+  @apply border-b border-t border-b-gray-200;
+}
+
+table.dataTable.stripe > tbody > tr > *, table.dataTable.display > tbody > tr > * {
+  height: 65px !important;
+  @apply  border-gray-200;
+}
+
+thead {
+  height: 65px !important;
+}
+
+table.dataTable thead > tr > th.dt-orderable-asc:hover, table.dataTable thead > tr > th.dt-orderable-desc:hover, table.dataTable thead > tr > td.dt-orderable-asc:hover, table.dataTable thead > tr > td.dt-orderable-desc:hover {
+  @apply outline-none outline-0 outline-transparent bg-gray-100 dark:hover:bg-gray-500;
+}
+
+table.dataTable thead > tr > th.dt-orderable-asc span.dt-column-order::before, table.dataTable thead > tr > th.dt-ordering-asc span.dt-column-order::before, table.dataTable thead > tr > td.dt-orderable-asc span.dt-column-order::before, table.dataTable thead > tr > td.dt-ordering-asc span.dt-column-order::before {
+    @apply absolute block text-xl text-primary dark:!text-primary_dark font-bold rotate-90 scale-x-50;
+    content: "<" / "";
+    bottom: 50%;
+}
+
+table.dataTable thead > tr > th.dt-orderable-desc span.dt-column-order::after, table.dataTable thead > tr > th.dt-ordering-desc span.dt-column-order::after, table.dataTable thead > tr > td.dt-orderable-desc span.dt-column-order::after, table.dataTable thead > tr > td.dt-ordering-desc span.dt-column-order::after {
+    @apply absolute block text-xl text-primary dark:!text-primary_dark font-bold rotate-90 scale-x-50;
+    content: ">" / "";
+    top: 50%;
+}
+
+.datatable__footer {
+  @apply bg-white flex flex-wrap justify-between gap-4 p-4 overflow-x-auto dark:bg-gray-800;
+}
+
+.datatable__footer > div:first-of-type {
+  @apply !bg-transparent flex flex-nowrap gap-4 items-center;
+}
+
+.datatable__footer > div:first-of-type .dt-length {
+  @apply bg-transparent flex flex-row-reverse flex-nowrap items-center gap-4;
+}
+
+.datatable__footer > div:first-of-type .dt-length > .dt-input {
+  @apply h-10 px-2.5 py-1 bg-transparent min-w-14 text-sm font-normal text-gray-700 bg-gray-50 border-gray-300 focus:border-primary rounded-lg dark:bg-gray-700 dark:text-white;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--color-primary);
+}
+
+.datatable__footer > div:first-of-type .dt-length > label::before {
+   content: "Filas";
+   @apply block text-sm font-semibold text-gray-700 dark:text-white;
+}
+
+.datatable__footer > div:first-of-type .dt-info {
+  @apply text-sm font-semibold text-gray-700 whitespace-nowrap dark:text-white;
+}
+
+.datatable__footer .dt-paging > nav {
+  @apply bg-transparent flex items-center gap-2;
+}
+
+
+.datatable__footer .dt-paging > nav > .dt-paging-button {
+  @apply border-gray-300 hover:border-primary focus:border-primary m-0 p-2 size-10 rounded-lg !flex !justify-center !items-center !text-sm !font-medium !text-gray-700 hover:text-white hover:font-semibold bg-white dark:bg-gray-600 dark:!text-white ;
+}
+
+.datatable__footer .dt-paging > nav > .dt-paging-button:active {
+  @apply !text-white !font-semibold;
+  background: var(--color-primary) !important;
+}
+
+.datatable__footer .dt-paging > nav > .dt-paging-button.previous, .datatable__footer .dt-paging > nav > .dt-paging-button.next {
+  @apply !text-gray-700 focus:!text-primary dark:!text-primary_dark dark:!text-white;
+}
+
+.datatable__footer .dt-paging > nav > .dt-paging-button.previous:active, .datatable__footer .dt-paging > nav > .dt-paging-button.next:active {
+  @apply !text-white;
+}
+
+.datatable__footer .dt-paging > nav > .dt-paging-button.current { 
+  @apply cursor-default border !border-primary !bg-primary dark:bg-primary_dark hover:!bg-primary dark:bg-primary_dark !opacity-100 !text-white hover:!text-white !font-semibold;
+  pointer-events: none !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button:hover {
+  @apply !text-primary dark:!text-primary_dark !font-semibold !border-solid !border;
+  background: var(--color-white) !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button.disabled, div.dt-container .dt-paging .dt-paging-button.disabled:hover, div.dt-container .dt-paging .dt-paging-button.disabled:active {
+  @apply !bg-white !cursor-default !text-gray-300 !bg-transparent focus:!border-gray-200 !border !border-gray-200 focus:!text-gray-200;
+  pointer-events: none !important;
+}
+
+div.dt-container .dt-paging .dt-paging-button:active {
+  @apply !ring-4 !ring-primary !ring-opacity-30;
+  box-shadow: unset;
+}
+
+.datatable__footer .dt-paging > nav > .dt-paging-button.previous:focus, .datatable__footer .dt-paging > nav > .dt-paging-button.next:focus {
+  @apply hover:!text-primary dark:!text-primary_dark hover:!bg-gray-100;
+}
+
+/*------------Styles for DataTable Backoffice-------------*/
+
+/*------------Styles for spinner in the Data Table-------------*/
+.dt-processing {
+  display: none;
+}
+
+div.dt-processing > div:last-child > div {
+    background: var(--color-primary);
+}
+/*------------Styles for spinner in the Data Table-------------*/
+
+/*----------------------Loading Container-----------------------*/
+
+.animation-pulse {
+  box-shadow: 0 0 0 20px var(--color-primary-loading-shadow-50);
+  transform: scale(0.8);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    box-shadow: 0 0 0 0px var(--color-primary-loading-shadow-100);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 60px var(--color-primary-loading-shadow-0);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+/*----------------------Loading Container-----------------------*/
+
+/*----------------------Ng Select Multiselect-----------------------*/
+
+.ng-select {
+  all: unset;
+}
+
+.custom-ng-select .ng-select-container {
+  @apply border border-gray-300 rounded-lg !min-h-height-ng-select bg-gray-50 dark:bg-gray-700 dark:border-gray-600;
+  padding: 9px 10px;
+}
+
+.custom-ng-select .ng-value-container {
+  @apply flex items-center;
+}
+
+.ng-value-container {
+  @apply gap-2;
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-placeholder {
+  z-index: unset;
+  position: unset;
+}
+
+.ng-select .ng-select-container .ng-value-container .ng-placeholder {
+  @apply text-gray-500 text-sm font-medium;
+  position: unset;
+  transform-origin: unset;
+  transition: unset;
+}
+
+.ng-select.ng-select-focused .ng-select-container .ng-value-container .ng-placeholder {
+  transform: unset;
+  color: unset;
+}
+
+.ng-placeholder,
+.ng-placeholder:active, 
+.ng-placeholder:focus,
+.ng-placeholder:target,
+.ng-placeholder:hover {
+  transform: unset !important;
+  @apply !text-gray-500 absolute top-3;
+}
+
+.custom-ng-select.ng-select-focused .ng-select-container {
+  @apply border-primary ring-1 ring-primary;
+}
+
+.ng-select {
+  @apply pb-0 relative;
+}
+
+.ng-dropdown-panel.ng-select-bottom {
+  @apply top-full
+}
+
+.ng-dropdown-panel.ng-select-top {
+  @apply bottom-full
+}
+
+.ng-dropdown-panel.ng-select-bottom, .ng-dropdown-panel.ng-select-top {
+  @apply rounded-lg font-Montserrat text-gray-500 text-sm font-normal overflow-hidden;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected {
+  @apply text-primary bg-gray-100 hover:bg-gray-200 dark:bg-gray-700  dark:!text-primary_dark font-bold;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  @apply bg-gray-100 text-gray-800 dark:text-white dark:hover:bg-gray-700 dark:bg-gray-700;
+}
+
+.ng-dropdown-panel{
+  @apply dark:bg-gray-800 
+}
+
+.ng-option {
+  @apply dark:!text-white
+}
+
+.ng-select .ng-select-container {
+  @apply min-h-height-ng-select;
+}
+
+.ng-value-container {
+  @apply gap-1.5;
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  @apply bg-primary dark:bg-primary_dark rounded-md text-white pl-1 pr-1.5 py-0.5 m-0 font-normal flex flex-nowrap gap-0.5 items-center;
+  font-size: 10px !important;
+}
+
+.ng-select.ng-select-multiple .ng-select-container.ng-has-value .ng-value-container {
+  @apply pt-0;
+}
+
+.ng-select .ng-select-container .ng-value-container {
+  @apply p-0 border-t-0;
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon {
+  @apply bg-transparent p-0 rounded-sm size-4 flex justify-center items-center text-base;
+}
+
+.ng-select.ng-select-multiple .ng-select-container.ng-has-value .ng-clear-wrapper, 
+.ng-select.ng-select-multiple .ng-select-container.ng-has-value .ng-arrow-wrapper {
+  @apply border-t-0;
+}
+.ng-select .ng-select-container:after {
+
+  border-bottom: unset !important;
+  content: unset !important;
+  bottom: unset !important;
+  left: unset !important;
+  right: unset !important;
+  position: unset !important;
+  transition:unset !important;
+}
+
+.ng-select.ng-select-multiple .ng-select-container.ng-has-value .ng-clear-wrapper, 
+.ng-select.ng-select-multiple .ng-select-container.ng-has-value .ng-arrow-wrapper {
+  border-top: 0em solid transparent;
+}
+
+.ng-select .ng-arrow-wrapper {
+  bottom: 0px;
+}
+
+.ng-clear-wrapper {
+  @apply mt-0.5;
+}
+
+.ng-clear-wrapper .ng-clear {
+  @apply bg-gray-200 !text-xl !font-medium px-1 rounded-md h-5 dark:bg-gray-300;
+}
+
+.ng-arrow-wrapper {
+ @apply bg-transparent ml-1.5;
+}
+
+.ng-arrow-wrapper .ng-arrow {
+  @apply bg-transparent mx-1.5 pb-1 relative;
+}
+.ng-arrow-wrapper .ng-arrow,
+.ng-arrow-wrapper .ng-arrow:focus {
+  @apply !text-transparent;
+}
+
+.ng-arrow-wrapper .ng-arrow::after {
+  content: "";
+  @apply absolute block w-2.5 h-2.5 text-gray-600;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 10 6'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5 5 1 1 5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  top: -6px;
+  left: -3px;
+  transform: rotate(180deg);
+}
+
+/*----------------------Ng Select Multiselect-----------------------*/
+
+
+/*----------------------SCROLLBAR color-----------------------*/
+@layer utilities {
+  /* Scrollbar clara */
+  .scrollbar {
+    scrollbar-width:auto;
+    scrollbar-color: #526e98 #ffffff; /* thumb y track para Firefox */
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background: #f9fafb;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d1d5db;
+    border-radius: 4px;
+  }
+
+  /* Scrollbar oscura para modo dark */
+  .dark .scrollbar {
+    scrollbar-color: #4b5563 #1f2937;
+  }
+
+  .dark .scrollbar::-webkit-scrollbar-track {
+    background: #1f2937;
+  }
+
+  .dark .scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4b5563;
+  }
+}
+
+/*----------------------SCROLLBAR color-----------------------*/

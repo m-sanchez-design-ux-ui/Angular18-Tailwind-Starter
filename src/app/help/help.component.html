@@ -1,0 +1,461 @@
+<!--//////////-->
+<!--Breadcrumb Start-->
+<div class="flex flex-row flex-wrap justify-between items-center w-full mb-4 gap-4">
+  <app-breadcrumb [breadcrumItems]="this.breadcrumb"></app-breadcrumb>
+</div>
+<!--Breadcrumb End-->
+<!--//////////-->
+<!--Title Page Container Start-->
+<h3 class="text-xl 2xl:text-2xl text-gray-900 font-semibold w-full py-4 dark:text-white">
+  Sección de ayuda
+</h3>
+<!--Title Page Container End-->
+<!--//////////-->
+<!--Accordeon Start 01-->
+<div
+  id="accordion-color-1"
+  data-accordion="collapse"
+  class="mb-4 bg-opacity-100 rounded-lg bg-white dark:bg-gray-800 shadow"
+  data-active-classes="text-primary dark:!text-primary_dark rounded-t-lg rounded-b-none"
+>
+  <!--//////////-->
+  <!--Filter Header Start-->
+  <h2 id="accordion-color-heading-1">
+    <button
+      type="button"
+      class="group flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-900 hover:text-primary dark:hover:text-primary_dark rounded-lg gap-3 bg-white hover:bg-gray-50 border border-gray-200 hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 dark:text-white"
+      data-accordion-target="#accordion-color-body-1"
+      aria-expanded="false"
+      aria-controls="accordion-color-body-1"
+    >
+      <span class="flex gap-2 flex-nowrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6 fill-none">
+          <path
+            class="fill-current hover:fill-primary"
+            d="M12 21C10.22 21 8.47991 20.4722 6.99987 19.4832C5.51983 18.4943 4.36628 17.0887 3.68509 15.4442C3.0039 13.7996 2.82567 11.99 3.17294 10.2442C3.5202 8.49836 4.37737 6.89471 5.63604 5.63604C6.89471 4.37737 8.49836 3.5202 10.2442 3.17294C11.99 2.82567 13.7996 3.0039 15.4442 3.68509C17.0887 4.36628 18.4943 5.51983 19.4832 6.99987C20.4722 8.47991 21 10.22 21 12C20.9974 14.3861 20.0483 16.6738 18.3611 18.3611C16.6738 20.0483 14.3861 20.9974 12 21ZM12 4.8C10.576 4.8 9.18393 5.22228 7.9999 6.01342C6.81586 6.80457 5.89302 7.92905 5.34807 9.24468C4.80312 10.5603 4.66054 12.008 4.93835 13.4047C5.21616 14.8013 5.9019 16.0842 6.90883 17.0912C7.91577 18.0981 9.19869 18.7838 10.5954 19.0617C11.992 19.3395 13.4397 19.1969 14.7553 18.6519C16.071 18.107 17.1954 17.1841 17.9866 16.0001C18.7777 14.8161 19.2 13.424 19.2 12C19.1979 10.0911 18.4386 8.261 17.0888 6.9112C15.739 5.5614 13.9089 4.80215 12 4.8Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M12 16.5C11.7613 16.5 11.5324 16.4052 11.3636 16.2364C11.1948 16.0676 11.1 15.8387 11.1 15.6V12H10.2C9.96131 12 9.73239 11.9052 9.56361 11.7364C9.39482 11.5676 9.3 11.3387 9.3 11.1C9.3 10.8613 9.39482 10.6324 9.56361 10.4636C9.73239 10.2948 9.96131 10.2 10.2 10.2H12C12.2387 10.2 12.4676 10.2948 12.6364 10.4636C12.8052 10.6324 12.9 10.8613 12.9 11.1V15.6C12.9 15.8387 12.8052 16.0676 12.6364 16.2364C12.4676 16.4052 12.2387 16.5 12 16.5Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M13.8 16.5H10.2C9.96131 16.5 9.73239 16.4052 9.56361 16.2364C9.39482 16.0676 9.3 15.8387 9.3 15.6C9.3 15.3613 9.39482 15.1324 9.56361 14.9636C9.73239 14.7948 9.96131 14.7 10.2 14.7H13.8C14.0387 14.7 14.2676 14.7948 14.4364 14.9636C14.6052 15.1324 14.7 15.3613 14.7 15.6C14.7 15.8387 14.6052 16.0676 14.4364 16.2364C14.2676 16.4052 14.0387 16.5 13.8 16.5Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M11.55 9.3C12.2956 9.3 12.9 8.69559 12.9 7.95C12.9 7.20442 12.2956 6.6 11.55 6.6C10.8044 6.6 10.2 7.20442 10.2 7.95C10.2 8.69559 10.8044 9.3 11.55 9.3Z"
+          />
+        </svg>
+        <span class="text-sm font-semibold pt-0.5 leading-normal">
+          ¿Cómo creo un nuevo registro?
+        </span>
+      </span>
+      <svg
+        data-accordion-icon
+        class="w-3 h-3 rotate-180 shrink-0"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 10 6"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5 5 1 1 5"
+        />
+      </svg>
+    </button>
+  </h2>
+  <!--Filter Header End-->
+  <!--//////////-->
+  <!--Filter Container Inner Start-->
+  <div
+    id="accordion-color-body-1"
+    class="hidden border border-gray-200 border-t-0 rounded-b-lg dark:border-gray-700"
+    aria-labelledby="accordion-color-heading-1"
+  >
+    <div class="w-full p-5">
+      <!--Filter Body Start-->
+      <div class="w-full">
+        <p class="text-gray-700 text-sm font-normal dark:text-gray-400">
+          Hacé clic en el botón
+          <span class="text-gray-700 font-bold dark:text-gray-200">"Nuevo"</span>, completá los
+          campos requeridos en el formulario y presioná
+          <span class="text-gray-700 font-bold dark:text-gray-200">"Guardar"</span>. Vas a recibir
+          una notificación si todo salió bien.
+        </p>
+      </div>
+      <!--Filter Body End-->
+    </div>
+  </div>
+  <!--Filter Container Inner End-->
+  <!--//////////-->
+</div>
+<!--Accordeon End 01-->
+<!--//////////-->
+<!--Accordeon Start 02-->
+<div
+  id="accordion-color-2"
+  data-accordion="collapse"
+  class="mb-4 bg-opacity-100 rounded-lg bg-white dark:bg-gray-800 shadow"
+  data-active-classes="text-primary dark:!text-primary_dark rounded-t-lg rounded-b-none"
+>
+  <!--//////////-->
+  <!--Filter Header Start-->
+  <h2 id="accordion-color-heading-2">
+    <button
+      type="button"
+      class="group flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-900 hover:text-primary dark:hover:text-primary_dark rounded-lg gap-3 bg-white hover:bg-gray-50 border border-gray-200 hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 dark:text-white"
+      data-accordion-target="#accordion-color-body-2"
+      aria-expanded="false"
+      aria-controls="accordion-color-body-2"
+    >
+      <span class="flex gap-2 flex-nowrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6 fill-none">
+          <path
+            class="fill-current hover:fill-primary"
+            d="M12 21C10.22 21 8.47991 20.4722 6.99987 19.4832C5.51983 18.4943 4.36628 17.0887 3.68509 15.4442C3.0039 13.7996 2.82567 11.99 3.17294 10.2442C3.5202 8.49836 4.37737 6.89471 5.63604 5.63604C6.89471 4.37737 8.49836 3.5202 10.2442 3.17294C11.99 2.82567 13.7996 3.0039 15.4442 3.68509C17.0887 4.36628 18.4943 5.51983 19.4832 6.99987C20.4722 8.47991 21 10.22 21 12C20.9974 14.3861 20.0483 16.6738 18.3611 18.3611C16.6738 20.0483 14.3861 20.9974 12 21ZM12 4.8C10.576 4.8 9.18393 5.22228 7.9999 6.01342C6.81586 6.80457 5.89302 7.92905 5.34807 9.24468C4.80312 10.5603 4.66054 12.008 4.93835 13.4047C5.21616 14.8013 5.9019 16.0842 6.90883 17.0912C7.91577 18.0981 9.19869 18.7838 10.5954 19.0617C11.992 19.3395 13.4397 19.1969 14.7553 18.6519C16.071 18.107 17.1954 17.1841 17.9866 16.0001C18.7777 14.8161 19.2 13.424 19.2 12C19.1979 10.0911 18.4386 8.261 17.0888 6.9112C15.739 5.5614 13.9089 4.80215 12 4.8Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M12 16.5C11.7613 16.5 11.5324 16.4052 11.3636 16.2364C11.1948 16.0676 11.1 15.8387 11.1 15.6V12H10.2C9.96131 12 9.73239 11.9052 9.56361 11.7364C9.39482 11.5676 9.3 11.3387 9.3 11.1C9.3 10.8613 9.39482 10.6324 9.56361 10.4636C9.73239 10.2948 9.96131 10.2 10.2 10.2H12C12.2387 10.2 12.4676 10.2948 12.6364 10.4636C12.8052 10.6324 12.9 10.8613 12.9 11.1V15.6C12.9 15.8387 12.8052 16.0676 12.6364 16.2364C12.4676 16.4052 12.2387 16.5 12 16.5Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M13.8 16.5H10.2C9.96131 16.5 9.73239 16.4052 9.56361 16.2364C9.39482 16.0676 9.3 15.8387 9.3 15.6C9.3 15.3613 9.39482 15.1324 9.56361 14.9636C9.73239 14.7948 9.96131 14.7 10.2 14.7H13.8C14.0387 14.7 14.2676 14.7948 14.4364 14.9636C14.6052 15.1324 14.7 15.3613 14.7 15.6C14.7 15.8387 14.6052 16.0676 14.4364 16.2364C14.2676 16.4052 14.0387 16.5 13.8 16.5Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M11.55 9.3C12.2956 9.3 12.9 8.69559 12.9 7.95C12.9 7.20442 12.2956 6.6 11.55 6.6C10.8044 6.6 10.2 7.20442 10.2 7.95C10.2 8.69559 10.8044 9.3 11.55 9.3Z"
+          />
+        </svg>
+        <span class="text-sm font-semibold pt-0.5 leading-normal">
+          ¿Cómo edito un registro existente?
+        </span>
+      </span>
+      <svg
+        data-accordion-icon
+        class="w-3 h-3 rotate-180 shrink-0"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 10 6"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5 5 1 1 5"
+        />
+      </svg>
+    </button>
+  </h2>
+  <!--Filter Header End-->
+  <!--//////////-->
+  <!--Filter Container Inner Start-->
+  <div
+    id="accordion-color-body-2"
+    class="hidden border border-gray-200 border-t-0 rounded-b-lg dark:border-gray-700"
+    aria-labelledby="accordion-color-heading-2"
+  >
+    <div class="w-full p-5">
+      <div class="w-full">
+        <span class="text-gray-700 text-sm font-normal dark:text-gray-400 flex flex-wrap gap-1.5">
+          Usá el ícono de
+          <span class="text-gray-700 font-bold dark:text-gray-200 flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              class="fill-none size-5 mr-1"
+            >
+              <path
+                class="fill-current"
+                d="M13.1349 15.7657C13.1349 15.8011 13.1215 15.8351 13.0977 15.8602C13.0739 15.8853 13.0417 15.8993 13.008 15.8993H4.14613C4.11248 15.8993 4.08021 15.8853 4.05642 15.8602C4.03263 15.8351 4.01927 15.8011 4.01927 15.7657V6.42909C4.01927 6.39364 4.03263 6.35965 4.05642 6.33458C4.08021 6.30952 4.11248 6.29543 4.14613 6.29543H9.59726L11.1165 4.69478H4.14613C3.70967 4.69521 3.2912 4.87806 2.98258 5.20322C2.67396 5.52837 2.5004 5.96925 2.5 6.42909V15.7657C2.5004 16.2255 2.67396 16.6664 2.98258 16.9916C3.2912 17.3167 3.70967 17.4996 4.14613 17.5H13.008C13.4445 17.4996 13.8629 17.3167 14.1716 16.9916C14.4802 16.6664 14.6537 16.2255 14.6541 15.7657V10.0226L13.1349 11.6232V15.7657Z"
+              />
+              <path
+                class="fill-current"
+                d="M16.8297 3.20297C16.4024 2.75286 15.8228 2.5 15.2185 2.5C14.6143 2.5 14.0347 2.75286 13.6074 3.20297L7.69817 9.42791C7.59226 9.53969 7.5201 9.68198 7.49079 9.83688L6.95373 12.6668C6.9312 12.7831 6.9335 12.9032 6.96047 13.0185C6.98744 13.1337 7.0384 13.2412 7.10966 13.3331C7.18092 13.4251 7.27069 13.4991 7.37248 13.55C7.47426 13.6009 7.58552 13.6272 7.69817 13.6272C7.74915 13.627 7.8 13.622 7.8501 13.612L10.5354 13.0462C10.6825 13.0151 10.8176 12.9388 10.9236 12.8269L16.832 6.60196C17.044 6.37879 17.2121 6.11376 17.3267 5.82205C17.4413 5.53035 17.5002 5.21769 17.5 4.90197C17.4998 4.58625 17.4405 4.27368 17.3255 3.98214C17.2104 3.69061 17.042 3.42583 16.8297 3.20297ZM15.7556 4.33464C15.8262 4.40896 15.8823 4.49723 15.9205 4.59439C15.9587 4.69155 15.9784 4.79569 15.9784 4.90087C15.9784 5.00604 15.9587 5.11019 15.9205 5.20734C15.8823 5.3045 15.8262 5.39277 15.7556 5.4671L15.3484 5.89527L14.2743 4.76361L14.6815 4.33464C14.8239 4.1846 15.0171 4.10031 15.2185 4.10031C15.42 4.10031 15.6132 4.1846 15.7556 4.33464ZM10.0097 11.5208L8.6667 11.8041L8.93561 10.3883L13.2002 5.89527L14.2743 7.02693L10.0097 11.5208Z"
+              />
+            </svg>
+            lápiz
+          </span>
+          o la opción <span class="text-gray-700 font-bold dark:text-gray-200">"Editar"</span> en la
+          fila del registro. Se va a abrir un formulario con los datos cargados para que los
+          modifiques.
+        </span>
+      </div>
+    </div>
+  </div>
+  <!--Filter Container Inner End-->
+  <!--//////////-->
+</div>
+<!--Accordeon End 02-->
+<!--//////////-->
+<!--Accordeon Start 03-->
+<div
+  id="accordion-color-3"
+  data-accordion="collapse"
+  class="mb-4 bg-opacity-100 rounded-lg bg-white dark:bg-gray-800 shadow"
+  data-active-classes="text-primary dark:!text-primary_dark rounded-t-lg rounded-b-none"
+>
+  <!--//////////-->
+  <!--Filter Header Start-->
+  <h2 id="accordion-color-heading-3">
+    <button
+      type="button"
+      class="group flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-900 hover:text-primary dark:hover:text-primary_dark rounded-lg gap-3 bg-white hover:bg-gray-50 border border-gray-200 hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 dark:text-white"
+      data-accordion-target="#accordion-color-body-3"
+      aria-expanded="false"
+      aria-controls="accordion-color-body-3"
+    >
+      <span class="flex gap-2 flex-nowrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6 fill-none">
+          <path
+            class="fill-current hover:fill-primary"
+            d="M12 21C10.22 21 8.47991 20.4722 6.99987 19.4832C5.51983 18.4943 4.36628 17.0887 3.68509 15.4442C3.0039 13.7996 2.82567 11.99 3.17294 10.2442C3.5202 8.49836 4.37737 6.89471 5.63604 5.63604C6.89471 4.37737 8.49836 3.5202 10.2442 3.17294C11.99 2.82567 13.7996 3.0039 15.4442 3.68509C17.0887 4.36628 18.4943 5.51983 19.4832 6.99987C20.4722 8.47991 21 10.22 21 12C20.9974 14.3861 20.0483 16.6738 18.3611 18.3611C16.6738 20.0483 14.3861 20.9974 12 21ZM12 4.8C10.576 4.8 9.18393 5.22228 7.9999 6.01342C6.81586 6.80457 5.89302 7.92905 5.34807 9.24468C4.80312 10.5603 4.66054 12.008 4.93835 13.4047C5.21616 14.8013 5.9019 16.0842 6.90883 17.0912C7.91577 18.0981 9.19869 18.7838 10.5954 19.0617C11.992 19.3395 13.4397 19.1969 14.7553 18.6519C16.071 18.107 17.1954 17.1841 17.9866 16.0001C18.7777 14.8161 19.2 13.424 19.2 12C19.1979 10.0911 18.4386 8.261 17.0888 6.9112C15.739 5.5614 13.9089 4.80215 12 4.8Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M12 16.5C11.7613 16.5 11.5324 16.4052 11.3636 16.2364C11.1948 16.0676 11.1 15.8387 11.1 15.6V12H10.2C9.96131 12 9.73239 11.9052 9.56361 11.7364C9.39482 11.5676 9.3 11.3387 9.3 11.1C9.3 10.8613 9.39482 10.6324 9.56361 10.4636C9.73239 10.2948 9.96131 10.2 10.2 10.2H12C12.2387 10.2 12.4676 10.2948 12.6364 10.4636C12.8052 10.6324 12.9 10.8613 12.9 11.1V15.6C12.9 15.8387 12.8052 16.0676 12.6364 16.2364C12.4676 16.4052 12.2387 16.5 12 16.5Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M13.8 16.5H10.2C9.96131 16.5 9.73239 16.4052 9.56361 16.2364C9.39482 16.0676 9.3 15.8387 9.3 15.6C9.3 15.3613 9.39482 15.1324 9.56361 14.9636C9.73239 14.7948 9.96131 14.7 10.2 14.7H13.8C14.0387 14.7 14.2676 14.7948 14.4364 14.9636C14.6052 15.1324 14.7 15.3613 14.7 15.6C14.7 15.8387 14.6052 16.0676 14.4364 16.2364C14.2676 16.4052 14.0387 16.5 13.8 16.5Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M11.55 9.3C12.2956 9.3 12.9 8.69559 12.9 7.95C12.9 7.20442 12.2956 6.6 11.55 6.6C10.8044 6.6 10.2 7.20442 10.2 7.95C10.2 8.69559 10.8044 9.3 11.55 9.3Z"
+          />
+        </svg>
+        <span class="text-sm font-semibold pt-0.5 leading-normal">
+          ¿Cómo elimino un registro?
+        </span>
+      </span>
+      <svg
+        data-accordion-icon
+        class="w-3 h-3 rotate-180 shrink-0"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 10 6"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5 5 1 1 5"
+        />
+      </svg>
+    </button>
+  </h2>
+  <!--Filter Header End-->
+  <!--//////////-->
+  <!--Filter Container Inner Start-->
+  <div
+    id="accordion-color-body-3"
+    class="hidden border border-gray-200 border-t-0 rounded-b-lg dark:border-gray-700"
+    aria-labelledby="accordion-color-heading-3"
+  >
+    <div class="w-full p-5">
+      <div class="w-full">
+        <span class="text-gray-700 text-sm font-normal dark:text-gray-400 flex flex-wrap gap-1.5">
+          Hacé clic en el ícono de
+          <span class="text-gray-700 font-bold dark:text-gray-200 flex">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="size-5 fill-none mr-1"
+            >
+              <path
+                class="fill-current"
+                d="M20 6.21053H16V4.10526C16 3.54691 15.7893 3.01143 15.4142 2.61662C15.0391 2.2218 14.5304 2 14 2H10C9.46957 2 8.96086 2.2218 8.58579 2.61662C8.21071 3.01143 8 3.54691 8 4.10526V6.21053H4C3.73478 6.21053 3.48043 6.32143 3.29289 6.51884C3.10536 6.71624 3 6.98398 3 7.26316C3 7.54233 3.10536 7.81007 3.29289 8.00748C3.48043 8.20489 3.73478 8.31579 4 8.31579H5V19.8947C5 20.4531 5.21071 20.9886 5.58579 21.3834C5.96086 21.7782 6.46957 22 7 22H17C17.5304 22 18.0391 21.7782 18.4142 21.3834C18.7893 20.9886 19 20.4531 19 19.8947V8.31579H20C20.2652 8.31579 20.5196 8.20489 20.7071 8.00748C20.8946 7.81007 21 7.54233 21 7.26316C21 6.98398 20.8946 6.71624 20.7071 6.51884C20.5196 6.32143 20.2652 6.21053 20 6.21053ZM10 4.10526H14V6.21053H10V4.10526ZM17 19.8947H7V8.31579H17V19.8947Z"
+              />
+              <path
+                class="fill-current"
+                d="M10 9.36842C9.73478 9.36842 9.48043 9.47932 9.29289 9.67673C9.10536 9.87414 9 10.1419 9 10.4211V17.7895C9 18.0686 9.10536 18.3364 9.29289 18.5338C9.48043 18.7312 9.73478 18.8421 10 18.8421C10.2652 18.8421 10.5196 18.7312 10.7071 18.5338C10.8946 18.3364 11 18.0686 11 17.7895V10.4211C11 10.1419 10.8946 9.87414 10.7071 9.67673C10.5196 9.47932 10.2652 9.36842 10 9.36842Z"
+              />
+              <path
+                class="fill-current"
+                d="M14 9.36842C13.7348 9.36842 13.4804 9.47932 13.2929 9.67673C13.1054 9.87414 13 10.1419 13 10.4211V17.7895C13 18.0686 13.1054 18.3364 13.2929 18.5338C13.4804 18.7312 13.7348 18.8421 14 18.8421C14.2652 18.8421 14.5196 18.7312 14.7071 18.5338C14.8946 18.3364 15 18.0686 15 17.7895V10.4211C15 10.1419 14.8946 9.87414 14.7071 9.67673C14.5196 9.47932 14.2652 9.36842 14 9.36842Z"
+              />
+            </svg>
+            papelera
+          </span>
+          o la opción <span class="text-gray-700 font-bold dark:text-gray-200">"Eliminar".</span> El
+          sistema te va a pedir una confirmación antes de borrar el registro.
+        </span>
+      </div>
+    </div>
+  </div>
+  <!--Filter Container Inner End-->
+  <!--//////////-->
+</div>
+<!--Accordeon End 03-->
+<!--//////////-->
+<!--Accordeon Start 04-->
+<div
+  id="accordion-color-4"
+  data-accordion="collapse"
+  class="mb-4 bg-opacity-100 rounded-lg bg-white dark:bg-gray-800 shadow"
+  data-active-classes="text-primary dark:!text-primary_dark rounded-t-lg rounded-b-none"
+>
+  <!--//////////-->
+  <!--Filter Header Start-->
+  <h2 id="accordion-color-heading-4">
+    <button
+      type="button"
+      class="group flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-900 hover:text-primary dark:hover:text-primary_dark rounded-lg gap-3 bg-white hover:bg-gray-50 border border-gray-200 hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 dark:text-white"
+      data-accordion-target="#accordion-color-body-4"
+      aria-expanded="false"
+      aria-controls="accordion-color-body-4"
+    >
+      <span class="flex gap-2 flex-nowrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6 fill-none">
+          <path
+            class="fill-current hover:fill-primary"
+            d="M12 21C10.22 21 8.47991 20.4722 6.99987 19.4832C5.51983 18.4943 4.36628 17.0887 3.68509 15.4442C3.0039 13.7996 2.82567 11.99 3.17294 10.2442C3.5202 8.49836 4.37737 6.89471 5.63604 5.63604C6.89471 4.37737 8.49836 3.5202 10.2442 3.17294C11.99 2.82567 13.7996 3.0039 15.4442 3.68509C17.0887 4.36628 18.4943 5.51983 19.4832 6.99987C20.4722 8.47991 21 10.22 21 12C20.9974 14.3861 20.0483 16.6738 18.3611 18.3611C16.6738 20.0483 14.3861 20.9974 12 21ZM12 4.8C10.576 4.8 9.18393 5.22228 7.9999 6.01342C6.81586 6.80457 5.89302 7.92905 5.34807 9.24468C4.80312 10.5603 4.66054 12.008 4.93835 13.4047C5.21616 14.8013 5.9019 16.0842 6.90883 17.0912C7.91577 18.0981 9.19869 18.7838 10.5954 19.0617C11.992 19.3395 13.4397 19.1969 14.7553 18.6519C16.071 18.107 17.1954 17.1841 17.9866 16.0001C18.7777 14.8161 19.2 13.424 19.2 12C19.1979 10.0911 18.4386 8.261 17.0888 6.9112C15.739 5.5614 13.9089 4.80215 12 4.8Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M12 16.5C11.7613 16.5 11.5324 16.4052 11.3636 16.2364C11.1948 16.0676 11.1 15.8387 11.1 15.6V12H10.2C9.96131 12 9.73239 11.9052 9.56361 11.7364C9.39482 11.5676 9.3 11.3387 9.3 11.1C9.3 10.8613 9.39482 10.6324 9.56361 10.4636C9.73239 10.2948 9.96131 10.2 10.2 10.2H12C12.2387 10.2 12.4676 10.2948 12.6364 10.4636C12.8052 10.6324 12.9 10.8613 12.9 11.1V15.6C12.9 15.8387 12.8052 16.0676 12.6364 16.2364C12.4676 16.4052 12.2387 16.5 12 16.5Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M13.8 16.5H10.2C9.96131 16.5 9.73239 16.4052 9.56361 16.2364C9.39482 16.0676 9.3 15.8387 9.3 15.6C9.3 15.3613 9.39482 15.1324 9.56361 14.9636C9.73239 14.7948 9.96131 14.7 10.2 14.7H13.8C14.0387 14.7 14.2676 14.7948 14.4364 14.9636C14.6052 15.1324 14.7 15.3613 14.7 15.6C14.7 15.8387 14.6052 16.0676 14.4364 16.2364C14.2676 16.4052 14.0387 16.5 13.8 16.5Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M11.55 9.3C12.2956 9.3 12.9 8.69559 12.9 7.95C12.9 7.20442 12.2956 6.6 11.55 6.6C10.8044 6.6 10.2 7.20442 10.2 7.95C10.2 8.69559 10.8044 9.3 11.55 9.3Z"
+          />
+        </svg>
+        <span class="text-sm font-semibold pt-0.5 leading-normal"> ¿Cómo exporto los datos? </span>
+      </span>
+      <svg
+        data-accordion-icon
+        class="w-3 h-3 rotate-180 shrink-0"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 10 6"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5 5 1 1 5"
+        />
+      </svg>
+    </button>
+  </h2>
+  <!--Filter Header End-->
+  <!--//////////-->
+  <!--Filter Container Inner Start-->
+  <div
+    id="accordion-color-body-4"
+    class="hidden border border-gray-200 border-t-0 rounded-b-lg dark:border-gray-700"
+    aria-labelledby="accordion-color-heading-4"
+  >
+    <div class="w-full p-5">
+      <div class="w-full">
+        <p class="text-gray-700 text-sm font-normal dark:text-gray-400">
+          En la parte superior de la tabla encontrás un botón de descarga. Podés elegir exportar en
+          formato <span class="text-gray-700 font-bold dark:text-gray-200">Excel</span> o
+          <span class="text-gray-700 font-bold dark:text-gray-200">CSV</span> según lo que
+          necesites.
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--Filter Container Inner End-->
+  <!--//////////-->
+</div>
+<!--Accordeon End 04-->
+<!--//////////-->
+<!--Accordeon Start 05-->
+<div
+  id="accordion-color-5"
+  data-accordion="collapse"
+  class="mb-4 bg-opacity-100 rounded-lg bg-white dark:bg-gray-800 shadow"
+  data-active-classes="text-primary dark:!text-primary_dark rounded-t-lg rounded-b-none"
+>
+  <!--//////////-->
+  <!--Filter Header Start-->
+  <h2 id="accordion-color-heading-5">
+    <button
+      type="button"
+      class="group flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-900 hover:text-primary dark:hover:text-primary_dark rounded-lg gap-3 bg-white hover:bg-gray-50 border border-gray-200 hover:border-gray-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 dark:text-white"
+      data-accordion-target="#accordion-color-body-5"
+      aria-expanded="false"
+      aria-controls="accordion-color-body-5"
+    >
+      <span class="flex gap-2 flex-nowrap">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6 fill-none">
+          <path
+            class="fill-current hover:fill-primary"
+            d="M12 21C10.22 21 8.47991 20.4722 6.99987 19.4832C5.51983 18.4943 4.36628 17.0887 3.68509 15.4442C3.0039 13.7996 2.82567 11.99 3.17294 10.2442C3.5202 8.49836 4.37737 6.89471 5.63604 5.63604C6.89471 4.37737 8.49836 3.5202 10.2442 3.17294C11.99 2.82567 13.7996 3.0039 15.4442 3.68509C17.0887 4.36628 18.4943 5.51983 19.4832 6.99987C20.4722 8.47991 21 10.22 21 12C20.9974 14.3861 20.0483 16.6738 18.3611 18.3611C16.6738 20.0483 14.3861 20.9974 12 21ZM12 4.8C10.576 4.8 9.18393 5.22228 7.9999 6.01342C6.81586 6.80457 5.89302 7.92905 5.34807 9.24468C4.80312 10.5603 4.66054 12.008 4.93835 13.4047C5.21616 14.8013 5.9019 16.0842 6.90883 17.0912C7.91577 18.0981 9.19869 18.7838 10.5954 19.0617C11.992 19.3395 13.4397 19.1969 14.7553 18.6519C16.071 18.107 17.1954 17.1841 17.9866 16.0001C18.7777 14.8161 19.2 13.424 19.2 12C19.1979 10.0911 18.4386 8.261 17.0888 6.9112C15.739 5.5614 13.9089 4.80215 12 4.8Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M12 16.5C11.7613 16.5 11.5324 16.4052 11.3636 16.2364C11.1948 16.0676 11.1 15.8387 11.1 15.6V12H10.2C9.96131 12 9.73239 11.9052 9.56361 11.7364C9.39482 11.5676 9.3 11.3387 9.3 11.1C9.3 10.8613 9.39482 10.6324 9.56361 10.4636C9.73239 10.2948 9.96131 10.2 10.2 10.2H12C12.2387 10.2 12.4676 10.2948 12.6364 10.4636C12.8052 10.6324 12.9 10.8613 12.9 11.1V15.6C12.9 15.8387 12.8052 16.0676 12.6364 16.2364C12.4676 16.4052 12.2387 16.5 12 16.5Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M13.8 16.5H10.2C9.96131 16.5 9.73239 16.4052 9.56361 16.2364C9.39482 16.0676 9.3 15.8387 9.3 15.6C9.3 15.3613 9.39482 15.1324 9.56361 14.9636C9.73239 14.7948 9.96131 14.7 10.2 14.7H13.8C14.0387 14.7 14.2676 14.7948 14.4364 14.9636C14.6052 15.1324 14.7 15.3613 14.7 15.6C14.7 15.8387 14.6052 16.0676 14.4364 16.2364C14.2676 16.4052 14.0387 16.5 13.8 16.5Z"
+          />
+          <path
+            class="fill-current hover:fill-primary"
+            d="M11.55 9.3C12.2956 9.3 12.9 8.69559 12.9 7.95C12.9 7.20442 12.2956 6.6 11.55 6.6C10.8044 6.6 10.2 7.20442 10.2 7.95C10.2 8.69559 10.8044 9.3 11.55 9.3Z"
+          />
+        </svg>
+        <span class="text-sm font-semibold pt-0.5 leading-normal">
+          ¿Cómo contacto al soporte?
+        </span>
+      </span>
+      <svg
+        data-accordion-icon
+        class="w-3 h-3 rotate-180 shrink-0"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 10 6"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M9 5 5 1 1 5"
+        />
+      </svg>
+    </button>
+  </h2>
+  <!--Filter Header End-->
+  <!--//////////-->
+  <!--Filter Container Inner Start-->
+  <div
+    id="accordion-color-body-5"
+    class="hidden border border-gray-200 border-t-0 rounded-b-lg dark:border-gray-700"
+    aria-labelledby="accordion-color-heading-5"
+  >
+    <div class="w-full p-5">
+      <div class="w-full">
+        <p class="text-gray-700 text-sm font-normal dark:text-gray-400">
+          Podés escribirnos a
+          <span class="text-gray-700 font-bold dark:text-gray-200">{{
+            'soporte@originsw.com'
+          }}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--Filter Container Inner End-->
+  <!--//////////-->
+</div>
+<!--Accordeon End 05-->
+<!--//////////-->
