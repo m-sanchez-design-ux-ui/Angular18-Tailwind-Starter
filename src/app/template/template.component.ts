@@ -120,12 +120,16 @@ export class TemplateComponent implements OnInit, AfterViewInit {
     flatpickr('#datepicker-range-start', {
       locale: Spanish,
       dateFormat: 'd/m/Y',
+      // Without this, flatpickr falls back to the native OS date
+      // picker on touch devices instead of its own styled calendar.
+      disableMobile: true,
       // maxDate: "today", // Do not allow future dates to be selected (optional)
     });
 
     flatpickr('#datepicker-range-end', {
       locale: Spanish,
       dateFormat: 'd/m/Y',
+      disableMobile: true,
       // maxDate: "today",
     });
 

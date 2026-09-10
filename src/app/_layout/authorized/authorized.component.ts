@@ -11,11 +11,11 @@ import {
 import { Globals, ScreenSize } from '../../globals';
 import { ConfigService } from '../../shared/config.service';
 import { LoadingService } from '../../shared/loading/loading.service';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet, NavigationEnd } from '@angular/router';
 import { FeatherModule } from 'angular-feather';
-import { initFlowbite } from 'flowbite';
+import { initFlowbite, Drawer } from 'flowbite';
 import { SignInService } from '../../auth/services/sign-in.service';
-import { Subscription } from 'rxjs';
+import { Subscription, filter } from 'rxjs';
 import { NotificationsComponent } from '../../shared/notifications/notifications.component';
 import { NotificationsService } from '../../shared/notifications/notifications.service';
 import { CommonModule } from '@angular/common';
@@ -145,6 +145,27 @@ export class AuthorizedComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit() {
     initFlowbite();
+
+    // BUG FIX: on mobile, the sidebar drawer's backdrop (created by
+    // Flowbite's own JS) only tracked outside-clicks from the moment it
+    // was opened. Navigating via a link *inside* the drawer doesn't
+    // reload the page (Angular SPA), so the backdrop was left in a
+    // stale state after the route changed, and the drawer stayed open
+    // with no way to close it by tapping outside anymore. Explicitly
+    // hiding the drawer on every navigation keeps it in sync. Flowbite's
+    // Drawer.hide() only affects the mobile (off-canvas) state — the
+    // `lg:translate-x-0` utility class keeps it visible on desktop
+    // regardless, so this is a no-op there.
+    this.subscriptions.push(
+      this.router.events
+        .pipe(filter((event) => event instanceof NavigationEnd))
+        .subscribe(() => {
+          const sidebarEl = document.getElementById('sidebar-multi-level-sidebar');
+          if (sidebarEl) {
+            new Drawer(sidebarEl).hide();
+          }
+        })
+    );
 
     this.roles = this.signInService.getRoles();
 
